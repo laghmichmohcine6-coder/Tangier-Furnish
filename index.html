@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tangier Furnish — L'Art de Meubler</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
   <!-- Custom cursor (desktop only) -->
@@ -21,11 +25,15 @@
   <div id="loader">
     <div class="loader-inner">
       <svg class="loader-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round" />
       </svg>
       <div class="loader-wordmark">Tangier Furnish</div>
-      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"></div>
+      </div>
     </div>
   </div>
 
@@ -37,12 +45,19 @@
     <div class="cart-header">
       <span class="cart-title">Mon Panier</span>
       <button class="cart-close-btn" id="cartCloseBtn" aria-label="Fermer">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
       </button>
     </div>
     <div class="cart-items" id="cartItems">
       <div class="cart-empty" id="cartEmpty">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+          stroke-linecap="round">
+          <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
         <p>Votre panier est vide</p>
         <button class="btn-outline" id="cartEmptyBrowseBtn">Explorer le catalogue</button>
       </div>
@@ -74,8 +89,10 @@
     <nav class="nav-inner">
       <div class="nav-logo" id="navLogo">
         <svg class="nav-logo-mark" width="22" height="22" viewBox="0 0 48 48" fill="none">
-          <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" />
         </svg>
         <span>Tangier Furnish</span>
       </div>
@@ -87,11 +104,19 @@
       </ul>
       <div class="nav-actions">
         <button class="nav-icon-btn" id="navWishlistBtn" aria-label="Favoris" title="Ma liste de souhaits">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+          </svg>
           <span class="wishlist-nav-count" id="wishlistNavCount" style="display:none">0</span>
         </button>
         <button class="nav-cart-btn" id="navCartBtn" aria-label="Panier">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round">
+            <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
           <span class="cart-count" id="cartCount" style="display:none">0</span>
         </button>
         <button class="btn-outline small" data-page="auth">Connexion</button>
@@ -120,29 +145,27 @@
     <section class="hero hero--fullwidth">
 
       <!-- Full-width background image — complete interior scene -->
-      <img
-        class="hero-bg-img"
-        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1800&q=90"
-        alt="Salon de luxe Tangier Furnish"
-        loading="eager"
-      />
+      <img class="hero-bg-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1800&q=90"
+        alt="Salon de luxe Tangier Furnish" loading="eager" />
       <div class="hero-overlay"></div>
 
       <!-- Content -->
       <div class="hero-content-wrap">
         <div class="hero-content">
           <h1 class="hero-title reveal-up" style="--delay:0.1s">
-            Transformez votre espace<br/>
+            Transformez votre espace<br />
             <em>en chef-d'œuvre</em>
           </h1>
           <p class="hero-subtitle reveal-up" style="--delay:0.2s">
-            Découvrez des meubles uniques sélectionnés par nos artisans locaux.<br/>
+            Découvrez des meubles uniques sélectionnés par nos artisans locaux.<br />
             Design authentique, qualité exceptionnelle.
           </p>
           <div class="hero-actions reveal-up" style="--delay:0.3s">
             <button class="btn-primary large" data-page="marketplace">
               Explorer le catalogue
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </button>
             <button class="btn-ghost-light large" data-page="vendor">
               Devenir vendeur
@@ -188,13 +211,9 @@
         <div class="categories-grid categories-6col">
           <div class="category-card cat-equal reveal-up" style="--delay:0.05s" data-page="marketplace" data-cat="Salon">
             <div class="cat-img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=85"
-                alt="Canapés"
-                loading="lazy"
-                style="object-position: center 40%;"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=500&q=85'"
-              />
+              <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=85" alt="Canapés"
+                loading="lazy" style="object-position: center 40%;"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=500&q=85'" />
             </div>
             <div class="category-card-body">
               <h3>Canapés</h3>
@@ -203,39 +222,42 @@
           </div>
           <div class="category-card cat-equal reveal-up" style="--delay:0.1s" data-page="marketplace" data-cat="Salon">
             <div class="cat-img-wrap">
-              <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500&q=85" alt="Fauteuils" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500&q=85" alt="Fauteuils"
+                loading="lazy" />
             </div>
             <div class="category-card-body">
               <h3>Fauteuils</h3>
               <span class="cat-link">Voir la collection →</span>
             </div>
           </div>
-          <div class="category-card cat-equal reveal-up" style="--delay:0.15s" data-page="marketplace" data-cat="Salle à manger">
+          <div class="category-card cat-equal reveal-up" style="--delay:0.15s" data-page="marketplace"
+            data-cat="Salle à manger">
             <div class="cat-img-wrap">
-              <img src="https://images.unsplash.com/photo-1617098900591-3f90928e8c54?w=500&q=85" alt="Tables" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1617098900591-3f90928e8c54?w=500&q=85" alt="Tables"
+                loading="lazy" />
             </div>
             <div class="category-card-body">
               <h3>Tables</h3>
               <span class="cat-link">Voir la collection →</span>
             </div>
           </div>
-          <div class="category-card cat-equal reveal-up" style="--delay:0.2s" data-page="marketplace" data-cat="Éclairage">
+          <div class="category-card cat-equal reveal-up" style="--delay:0.2s" data-page="marketplace"
+            data-cat="Éclairage">
             <div class="cat-img-wrap">
-              <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&q=85" alt="Éclairage" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&q=85" alt="Éclairage"
+                loading="lazy" />
             </div>
             <div class="category-card-body">
               <h3>Éclairage</h3>
               <span class="cat-link">Voir la collection →</span>
             </div>
           </div>
-          <div class="category-card cat-equal reveal-up" style="--delay:0.25s" data-page="marketplace" data-cat="Décoration">
+          <div class="category-card cat-equal reveal-up" style="--delay:0.25s" data-page="marketplace"
+            data-cat="Décoration">
             <div class="cat-img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&q=85"
-                alt="Tapis"
+              <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&q=85" alt="Tapis"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1554995207-c18c203602cb?w=500&q=85'"
-              />
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1554995207-c18c203602cb?w=500&q=85'" />
             </div>
             <div class="category-card-body">
               <h3>Tapis</h3>
@@ -244,12 +266,9 @@
           </div>
           <div class="category-card cat-equal reveal-up" style="--delay:0.3s" data-page="marketplace" data-cat="Bureau">
             <div class="cat-img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1555041469-c0e6e1e36ef2?w=500&q=85"
-                alt="Rangements"
+              <img src="https://images.unsplash.com/photo-1555041469-c0e6e1e36ef2?w=500&q=85" alt="Rangements"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500&q=85'"
-              />
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500&q=85'" />
             </div>
             <div class="category-card-body">
               <h3>Rangements</h3>
@@ -265,29 +284,29 @@
       <div class="artisan-inner">
         <div class="artisan-media reveal-up">
           <div class="artisan-img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&q=90"
-              alt="Artisan marocain au travail"
-              loading="lazy"
-              style="object-fit:cover;object-position:center 40%;"
-              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600210492493-0946911123ea?w=900&q=90'"
-            />
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&q=90"
+              alt="Artisan marocain au travail" loading="lazy" style="object-fit:cover;object-position:center 40%;"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600210492493-0946911123ea?w=900&q=90'" />
           </div>
         </div>
         <div class="artisan-content reveal-up" style="--delay:0.2s">
           <div class="section-eyebrow">Artisans du Maroc</div>
           <h2 class="artisan-title">
-            Des mains expertes au service<br/>
+            Des mains expertes au service<br />
             <em>d'une tradition séculaire</em>
           </h2>
           <p class="artisan-story">
-            Depuis des générations, les maîtres artisans de Tanger, Fès et Marrakech façonnent des pièces uniques qui racontent l'âme du Maroc. Chaque courbe, chaque texture, chaque finition naît d'un savoir-faire transmis de maître en apprenti, entre patience absolue et passion sincère.
+            Depuis des générations, les maîtres artisans de Tanger, Fès et Marrakech façonnent des pièces uniques qui
+            racontent l'âme du Maroc. Chaque courbe, chaque texture, chaque finition naît d'un savoir-faire transmis de
+            maître en apprenti, entre patience absolue et passion sincère.
           </p>
           <p class="artisan-story">
-            Tangier Furnish sélectionne et met en lumière ces créateurs d'exception — permettant à leur art de traverser les frontières et d'habiller les intérieurs du monde entier avec l'authenticité d'un héritage vivant.
+            Tangier Furnish sélectionne et met en lumière ces créateurs d'exception — permettant à leur art de traverser
+            les frontières et d'habiller les intérieurs du monde entier avec l'authenticité d'un héritage vivant.
           </p>
           <div class="artisan-signature">
-           <img class="artisan-signature-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80" alt="Hassan Benali" />
+            <img class="artisan-signature-avatar"
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80" alt="Hassan Benali" />
             <div class="artisan-signature-name">
               <strong>Hassan Benali</strong>
               <span>Maître ébéniste — Tanger, depuis 1987</span>
@@ -295,7 +314,9 @@
           </div>
           <button class="btn-primary large" data-page="marketplace">
             Découvrir les créations
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </button>
         </div>
       </div>
@@ -306,8 +327,11 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <span class="section-eyebrow" style="display:block;margin-bottom:0.5rem">Inspiration pour votre intérieur</span>
-            <h2 class="section-title" style="font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;color:var(--text-secondary)">Des pièces sélectionnées pour chaque style</h2>
+            <span class="section-eyebrow" style="display:block;margin-bottom:0.5rem">Inspiration pour votre
+              intérieur</span>
+            <h2 class="section-title"
+              style="font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;color:var(--text-secondary)">Des pièces
+              sélectionnées pour chaque style</h2>
           </div>
           <button class="btn-outline" data-page="marketplace">Tout voir</button>
         </div>
@@ -327,26 +351,40 @@
           <div class="how-card reveal-up" style="--delay:0.1s">
             <div class="how-number">01</div>
             <div class="how-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
             </div>
             <h3>Explorez</h3>
-            <p>Naviguez parmi des milliers de pièces soigneusement sélectionnées par nos artisans locaux de Tanger et du Maroc.</p>
+            <p>Naviguez parmi des milliers de pièces soigneusement sélectionnées par nos artisans locaux de Tanger et du
+              Maroc.</p>
           </div>
           <div class="how-card reveal-up" style="--delay:0.2s">
             <div class="how-number">02</div>
             <div class="how-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round">
+                <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
             </div>
             <h3>Choisissez</h3>
-            <p>Ajoutez vos pièces favorites à votre panier. Consultez les détails, les matériaux et l'histoire de chaque artisan.</p>
+            <p>Ajoutez vos pièces favorites à votre panier. Consultez les détails, les matériaux et l'histoire de chaque
+              artisan.</p>
           </div>
           <div class="how-card reveal-up" style="--delay:0.3s">
             <div class="how-number">03</div>
             <div class="how-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </div>
             <h3>Recevez</h3>
-            <p>Livraison soignée à domicile ou retrait direct chez l'artisan. Chaque commande est emballée avec soin.</p>
+            <p>Livraison soignée à domicile ou retrait direct chez l'artisan. Chaque commande est emballée avec soin.
+            </p>
           </div>
         </div>
       </div>
@@ -357,18 +395,24 @@
       <div class="dark-section-inner container">
         <div class="dark-section-text">
           <div class="section-eyebrow" style="color:rgba(255,255,255,0.5)">Notre héritage</div>
-          <h2 class="dark-section-title">L'art de meubler,<br/><em>réinventé au Maroc</em></h2>
-          <p class="dark-section-desc">Chaque pièce naît d'un dialogue entre tradition séculaire et vision contemporaine. Nos artisans de Tanger, Fès et Marrakech façonnent des meubles qui racontent l'âme du Maroc.</p>
+          <h2 class="dark-section-title">L'art de meubler,<br /><em>réinventé au Maroc</em></h2>
+          <p class="dark-section-desc">Chaque pièce naît d'un dialogue entre tradition séculaire et vision
+            contemporaine. Nos artisans de Tanger, Fès et Marrakech façonnent des meubles qui racontent l'âme du Maroc.
+          </p>
           <div class="dark-section-stats">
-            <div class="dark-stat"><span class="dark-stat-n">12k+</span><span class="dark-stat-l">Clients satisfaits</span></div>
-            <div class="dark-stat"><span class="dark-stat-n">340</span><span class="dark-stat-l">Artisans partenaires</span></div>
-            <div class="dark-stat"><span class="dark-stat-n">8 ans</span><span class="dark-stat-l">D'expertise</span></div>
+            <div class="dark-stat"><span class="dark-stat-n">12k+</span><span class="dark-stat-l">Clients
+                satisfaits</span></div>
+            <div class="dark-stat"><span class="dark-stat-n">340</span><span class="dark-stat-l">Artisans
+                partenaires</span></div>
+            <div class="dark-stat"><span class="dark-stat-n">8 ans</span><span class="dark-stat-l">D'expertise</span>
+            </div>
           </div>
           <button class="btn-outline light" data-page="vendor">Rejoindre notre réseau</button>
         </div>
         <div class="dark-section-images">
           <div class="dark-img-primary">
-            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700&q=90" alt="Salon marocain contemporain" />
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700&q=90"
+              alt="Salon marocain contemporain" />
           </div>
 
         </div>
@@ -385,15 +429,33 @@
         <div class="testimonials-grid">
           <div class="testimonial-card reveal-up" style="--delay:0.1s">
             <div class="testimonial-stars">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
             </div>
-            <blockquote>"Une expérience d'achat exceptionnelle. Le canapé que j'ai commandé est encore plus beau en vrai. La livraison était soignée et rapide."</blockquote>
+            <blockquote>"Une expérience d'achat exceptionnelle. Le canapé que j'ai commandé est encore plus beau en
+              vrai. La livraison était soignée et rapide."</blockquote>
             <div class="testimonial-author">
-              <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" alt="Sophia" />
+              <img
+                src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
+                alt="Sophia" />
               <div>
                 <strong>Sophia Benali</strong>
                 <span>Casablanca</span>
@@ -402,15 +464,33 @@
           </div>
           <div class="testimonial-card reveal-up" style="--delay:0.2s">
             <div class="testimonial-stars">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
             </div>
-            <blockquote>"Tangier Furnish a complètement changé mon intérieur. Des pièces uniques introuvables ailleurs, avec une vraie histoire derrière chaque objet."</blockquote>
+            <blockquote>"Tangier Furnish a complètement changé mon intérieur. Des pièces uniques introuvables ailleurs,
+              avec une vraie histoire derrière chaque objet."</blockquote>
             <div class="testimonial-author">
-              <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" alt="Karim" />
+              <img
+                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
+                alt="Karim" />
               <div>
                 <strong>Karim El Idrissi</strong>
                 <span>Tanger</span>
@@ -419,15 +499,33 @@
           </div>
           <div class="testimonial-card reveal-up" style="--delay:0.3s">
             <div class="testimonial-stars">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
             </div>
-            <blockquote>"En tant qu'architecte d'intérieur, je recommande Tangier Furnish à tous mes clients. La qualité des pièces est remarquable."</blockquote>
+            <blockquote>"En tant qu'architecte d'intérieur, je recommande Tangier Furnish à tous mes clients. La qualité
+              des pièces est remarquable."</blockquote>
             <div class="testimonial-author">
-              <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" alt="Leila" />
+              <img
+                src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
+                alt="Leila" />
               <div>
                 <strong>Leila Mansouri</strong>
                 <span>Rabat</span>
@@ -457,21 +555,36 @@
           <div class="footer-brand">
             <div class="footer-logo">
               <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-                <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
               </svg>
               <span>Tangier Furnish</span>
             </div>
-            <p>La marketplace de référence pour le mobilier d'exception au Maroc. Artisanat local, design contemporain.</p>
+            <p>La marketplace de référence pour le mobilier d'exception au Maroc. Artisanat local, design contemporain.
+            </p>
             <div class="footer-social">
               <a href="#" aria-label="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+                </svg>
               </a>
               <a href="#" aria-label="Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                </svg>
               </a>
               <a href="#" aria-label="Pinterest">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.16 1.22-5.16s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.49-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.1-2.4 3.1-5.25 0-2.16-1.46-3.77-4.1-3.77-2.99 0-4.85 2.24-4.85 4.74 0 .86.25 1.47.64 1.94.18.22.21.3.14.54-.05.18-.15.6-.19.77-.06.25-.26.34-.48.25-1.35-.55-1.98-2.04-1.98-3.71 0-2.74 2.32-6.06 6.94-6.06 3.72 0 6.19 2.71 6.19 5.62 0 3.86-2.14 6.74-5.29 6.74-1.06 0-2.05-.57-2.39-1.21l-.65 2.52c-.23.9-.86 2.03-1.29 2.72.97.3 2 .46 3.06.46 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.16 1.22-5.16s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.49-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.1-2.4 3.1-5.25 0-2.16-1.46-3.77-4.1-3.77-2.99 0-4.85 2.24-4.85 4.74 0 .86.25 1.47.64 1.94.18.22.21.3.14.54-.05.18-.15.6-.19.77-.06.25-.26.34-.48.25-1.35-.55-1.98-2.04-1.98-3.71 0-2.74 2.32-6.06 6.94-6.06 3.72 0 6.19 2.71 6.19 5.62 0 3.86-2.14 6.74-5.29 6.74-1.06 0-2.05-.57-2.39-1.21l-.65 2.52c-.23.9-.86 2.03-1.29 2.72.97.3 2 .46 3.06.46 5.52 0 10-4.48 10-10S17.52 2 12 2z" />
+                </svg>
               </a>
             </div>
           </div>
@@ -586,17 +699,29 @@
       <div class="marketplace-main">
         <div class="marketplace-search-wrap">
           <div class="search-bar">
-            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <input type="search" id="searchInput" class="search-input" placeholder="Rechercher un produit, une catégorie…" autocomplete="off" />
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            <input type="search" id="searchInput" class="search-input"
+              placeholder="Rechercher un produit, une catégorie…" autocomplete="off" />
             <button class="search-clear" id="searchClear" aria-label="Effacer">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
             </button>
           </div>
         </div>
         <div class="marketplace-toolbar">
           <div class="toolbar-left">
             <button class="mobile-filters-btn" id="mobileFiltersBtn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="4" y1="6" x2="20" y2="6" />
+                <line x1="8" y1="12" x2="16" y2="12" />
+                <line x1="11" y1="18" x2="13" y2="18" />
+              </svg>
               Filtres
             </button>
             <span class="results-count" id="resultsCount">30 produits</span>
@@ -620,7 +745,10 @@
         <div class="products-grid" id="marketplaceGrid"></div>
 
         <div class="empty-state" id="emptyState" style="display:none">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
           <h3>Aucun résultat trouvé</h3>
           <p>Essayez d'ajuster vos filtres pour découvrir plus de produits</p>
           <button class="btn-outline" id="resetFiltersEmptyBtn">Réinitialiser les filtres</button>
@@ -637,9 +765,13 @@
       <div class="container">
         <div class="breadcrumb" id="productBreadcrumb">
           <a href="#" data-page="home">Accueil</a>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
           <a href="#" data-page="marketplace">Catalogue</a>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
           <span id="breadcrumbProduct">Produit</span>
         </div>
 
@@ -665,8 +797,10 @@
         <!-- Logo -->
         <div class="auth-card-logo" data-page="home">
           <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
-            <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
           <span>Tangier Furnish</span>
         </div>
@@ -692,6 +826,14 @@
             <label>Mot de passe</label>
             <input type="password" id="loginPassword" placeholder="••••••••" class="form-input" />
           </div>
+          <div class="role-selector">
+            <div class="role-label">Type de compte</div>
+            <div class="role-options">
+              <button class="role-option active" type="button" data-role-option="customer">Client</button>
+              <button class="role-option" type="button" data-role-option="vendor">Vendeur</button>
+              <button class="role-option" type="button" data-role-option="admin">Admin</button>
+            </div>
+          </div>
           <div class="form-row space-between" style="margin-bottom:1.25rem">
             <label class="checkbox-label"><input type="checkbox" /> Se souvenir de moi</label>
             <a href="#" class="link-text">Mot de passe oublié ?</a>
@@ -704,11 +846,27 @@
           <!-- Social buttons -->
           <div class="auth-social-btns">
             <button class="auth-social-btn" id="googleLoginBtn" type="button">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  fill="#4285F4" />
+                <path
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  fill="#34A853" />
+                <path
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                  fill="#EA4335" />
+              </svg>
               Continuer avec Google
             </button>
             <button class="auth-social-btn" id="appleLoginBtn" type="button">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              </svg>
               Continuer avec Apple
             </button>
           </div>
@@ -749,7 +907,15 @@
               <option>Fès</option>
             </select>
           </div>
-          <label class="checkbox-label" style="margin-bottom:1.25rem"><input type="checkbox" /> J'accepte les <a href="#" class="link-text">conditions d'utilisation</a></label>
+          <div class="role-selector">
+            <div class="role-label">Je cree un compte</div>
+            <div class="role-options">
+              <button class="role-option active" type="button" data-role-option="customer">Client</button>
+              <button class="role-option" type="button" data-role-option="vendor">Vendeur</button>
+            </div>
+          </div>
+          <label class="checkbox-label" style="margin-bottom:1.25rem"><input type="checkbox" /> J'accepte les <a
+              href="#" class="link-text">conditions d'utilisation</a></label>
           <button class="btn-primary full-width" id="registerBtn">Créer mon compte</button>
         </div>
 
@@ -766,31 +932,52 @@
       <aside class="vendor-sidebar">
         <div class="vendor-sidebar-logo" data-page="home">
           <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-            <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
           <span>Tangier Furnish</span>
         </div>
 
         <nav class="vendor-nav">
           <a href="#" class="vendor-nav-item active" data-vendor-tab="overview">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+            </svg>
             Tableau de bord
           </a>
           <a href="#" class="vendor-nav-item" data-vendor-tab="products">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+            </svg>
             Mes produits
           </a>
           <a href="#" class="vendor-nav-item" data-vendor-tab="orders">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
             Commandes
           </a>
           <a href="#" class="vendor-nav-item" data-vendor-tab="analytics">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
             Analytiques
           </a>
           <a href="#" class="vendor-nav-item" data-vendor-tab="add">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="16" />
+              <line x1="8" y1="12" x2="16" y2="12" />
+            </svg>
             Ajouter un produit
           </a>
         </nav>
@@ -798,7 +985,10 @@
         <div class="vendor-sidebar-bottom">
           <div class="vendor-profile">
             <div class="vendor-profile-avatar">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 018 0v2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="7" r="4" />
+                <path d="M6 21v-2a4 4 0 018 0v2" />
+              </svg>
             </div>
             <div>
               <strong>Mon espace vendeur</strong>
@@ -806,7 +996,12 @@
             </div>
           </div>
           <button class="btn-text small" id="vendorLogoutBtn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
             Se déconnecter
           </button>
         </div>
@@ -823,7 +1018,10 @@
           <div class="stats-grid">
             <div class="stat-card">
               <div class="stat-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                </svg>
               </div>
               <div class="stat-body">
                 <span class="stat-value">24</span>
@@ -833,7 +1031,10 @@
             </div>
             <div class="stat-card">
               <div class="stat-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18" />
+                  <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
               </div>
               <div class="stat-body">
                 <span class="stat-value">18</span>
@@ -843,7 +1044,10 @@
             </div>
             <div class="stat-card">
               <div class="stat-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="12" y1="1" x2="12" y2="23" />
+                  <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                </svg>
               </div>
               <div class="stat-body">
                 <span class="stat-value">34 200</span>
@@ -853,7 +1057,10 @@
             </div>
             <div class="stat-card">
               <div class="stat-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
               </div>
               <div class="stat-body">
                 <span class="stat-value">1 420</span>
@@ -921,7 +1128,10 @@
           <div class="vendor-page-header">
             <h1>Mes produits</h1>
             <button class="btn-primary" data-vendor-tab="add">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
               Nouveau produit
             </button>
           </div>
@@ -1094,7 +1304,12 @@
             <div class="form-section">
               <h3>Images</h3>
               <div class="upload-zone">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                  stroke-linecap="round">
+                  <polyline points="16 16 12 12 8 16" />
+                  <line x1="12" y1="12" x2="12" y2="21" />
+                  <path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3" />
+                </svg>
                 <p>Glissez vos images ici ou <button class="btn-text">parcourez</button></p>
                 <span>JPG, PNG, WEBP — Max 10 Mo</span>
               </div>
@@ -1113,17 +1328,104 @@
   <!-- ════════════════════════════════════════
        ORDER CONFIRMATION PAGE
   ════════════════════════════════════════ -->
+  <!-- ADMIN DASHBOARD PAGE -->
+  <div id="page-admin" class="page">
+    <div class="vendor-layout admin-layout">
+      <aside class="vendor-sidebar">
+        <div class="vendor-sidebar-logo" data-page="home">
+          <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
+            <path d="M4 36 L4 20 L24 8 L44 20 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M14 36 L14 26 L24 20 L34 26 L34 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>Admin</span>
+        </div>
+        <nav class="vendor-nav">
+          <a href="#" class="vendor-nav-item active">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12l2 2 4-4" />
+              <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Verification vendeurs
+          </a>
+        </nav>
+        <div class="vendor-sidebar-bottom">
+          <div class="vendor-profile">
+            <div class="vendor-profile-avatar">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6l7-4z" />
+              </svg>
+            </div>
+            <div>
+              <strong>Espace admin</strong>
+              <span>Controle plateforme</span>
+            </div>
+          </div>
+          <button class="btn-text small" id="adminLogoutBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+            Se deconnecter
+          </button>
+        </div>
+      </aside>
+
+      <main class="vendor-main">
+        <div class="vendor-page-header">
+          <div>
+            <h1>Verification vendeurs</h1>
+            <p>Validez les comptes vendeurs avant l'acces au tableau de bord.</p>
+          </div>
+        </div>
+        <div class="stats-grid admin-stats">
+          <div class="stat-card">
+            <div class="stat-body">
+              <span class="stat-value" id="adminPendingCount">0</span>
+              <span class="stat-label">En attente</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-body">
+              <span class="stat-value" id="adminApprovedCount">0</span>
+              <span class="stat-label">Approuves</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-body">
+              <span class="stat-value" id="adminRejectedCount">0</span>
+              <span class="stat-label">Refuses</span>
+            </div>
+          </div>
+        </div>
+        <div class="vendor-panel">
+          <div class="vendor-panel-header">
+            <h3>Demandes vendeur</h3>
+          </div>
+          <div class="admin-vendor-list" id="adminVendorList"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+
   <div id="page-confirmation" class="page">
     <div class="confirmation-wrap">
       <div class="container">
         <div class="confirmation-card">
           <div class="confirmation-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
           </div>
           <div class="confirmation-headline">
             <p class="confirmation-eyebrow">Commande confirmée</p>
             <h1 class="confirmation-title">Merci pour votre achat !</h1>
-            <p class="confirmation-sub">Votre commande <strong id="confirmOrderNumber">#TF-2025-0001</strong> a bien été reçue. Vous recevrez une confirmation par email.</p>
+            <p class="confirmation-sub">Votre commande <strong id="confirmOrderNumber">#TF-2025-0001</strong> a bien été
+              reçue. Vous recevrez une confirmation par email.</p>
           </div>
 
           <div class="confirmation-body">
@@ -1140,22 +1442,33 @@
               <h3 class="conf-panel-title">Informations de livraison</h3>
               <div class="conf-info-list">
                 <div class="conf-info-row">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
                   <span>Livraison à domicile</span>
                 </div>
                 <div class="conf-info-row">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
                   <span>Délai : 5 à 10 jours ouvrables</span>
                 </div>
                 <div class="conf-info-row">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 011.72 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L5.09 8.49A16 16 0 0011 14.51l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0119 15.5"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 011.72 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L5.09 8.49A16 16 0 0011 14.51l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0119 15.5" />
+                  </svg>
                   <span>Suivi SMS inclus</span>
                 </div>
               </div>
 
               <div class="confirmation-actions">
                 <button class="btn-primary full-width" id="viewTrackingBtn">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                   Suivre ma commande
                 </button>
                 <button class="btn-outline full-width" data-page="marketplace">Continuer mes achats</button>
@@ -1180,7 +1493,9 @@
             <h1 class="tracking-order-num" id="trackingOrderNumber">#TF-2025-0001</h1>
           </div>
           <button class="btn-outline" data-page="confirmation">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
             Retour
           </button>
         </div>
@@ -1190,7 +1505,10 @@
           <div class="tracking-steps">
             <div class="tracking-step completed" data-step="0">
               <div class="tracking-step-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
               </div>
               <div class="tracking-step-info">
                 <span class="tracking-step-label">Confirmé</span>
@@ -1204,7 +1522,11 @@
 
             <div class="tracking-step active" data-step="1">
               <div class="tracking-step-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round">
+                  <path
+                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                </svg>
               </div>
               <div class="tracking-step-info">
                 <span class="tracking-step-label">Préparation</span>
@@ -1218,7 +1540,13 @@
 
             <div class="tracking-step" data-step="2">
               <div class="tracking-step-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round">
+                  <rect x="1" y="3" width="15" height="13" />
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                  <circle cx="5.5" cy="18.5" r="2.5" />
+                  <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
               </div>
               <div class="tracking-step-info">
                 <span class="tracking-step-label">Expédition</span>
@@ -1232,7 +1560,11 @@
 
             <div class="tracking-step" data-step="3">
               <div class="tracking-step-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
               </div>
               <div class="tracking-step-info">
                 <span class="tracking-step-label">Livré</span>
@@ -1263,7 +1595,10 @@
         <div class="tracking-info-grid">
           <div class="tracking-info-card">
             <div class="tracking-info-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 011.72 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L5.09 8.49A16 16 0 0011 14.51l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0119 15.5"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 011.72 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L5.09 8.49A16 16 0 0011 14.51l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0119 15.5" />
+              </svg>
             </div>
             <div>
               <h4>Service client</h4>
@@ -1273,7 +1608,10 @@
           </div>
           <div class="tracking-info-card">
             <div class="tracking-info-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
             </div>
             <div>
               <h4>Email</h4>
@@ -1283,7 +1621,10 @@
           </div>
           <div class="tracking-info-card">
             <div class="tracking-info-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
             </div>
             <div>
               <h4>Livraison</h4>
@@ -1304,14 +1645,18 @@
       <div class="container">
         <div class="breadcrumb checkout-breadcrumb">
           <a href="#" data-page="home">Accueil</a>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
           <span>Finaliser la commande</span>
         </div>
         <h1 class="checkout-title">Finaliser la commande</h1>
         <div class="checkout-steps">
-          <div class="checkout-step completed"><span class="step-num">1</span><span class="step-label">Panier</span></div>
+          <div class="checkout-step completed"><span class="step-num">1</span><span class="step-label">Panier</span>
+          </div>
           <div class="checkout-step-line"></div>
-          <div class="checkout-step active"><span class="step-num">2</span><span class="step-label">Livraison</span></div>
+          <div class="checkout-step active"><span class="step-num">2</span><span class="step-label">Livraison</span>
+          </div>
           <div class="checkout-step-line"></div>
           <div class="checkout-step"><span class="step-num">3</span><span class="step-label">Confirmation</span></div>
         </div>
@@ -1337,7 +1682,8 @@
               </div>
               <div class="form-group">
                 <label>Adresse complète <span class="required">*</span></label>
-                <input type="text" id="checkoutAddress" placeholder="Numéro et nom de rue, appartement..." class="form-input" />
+                <input type="text" id="checkoutAddress" placeholder="Numéro et nom de rue, appartement..."
+                  class="form-input" />
               </div>
               <div class="form-row gap">
                 <div class="form-group">
@@ -1396,7 +1742,10 @@
               <div class="payment-options">
                 <label class="payment-option">
                   <input type="radio" name="payment" value="card" checked />
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="1" y="4" width="22" height="16" rx="2" />
+                    <line x1="1" y1="10" x2="23" y2="10" />
+                  </svg>
                   <div>
                     <strong>Carte bancaire</strong>
                     <span>Visa, Mastercard, CMI</span>
@@ -1404,7 +1753,10 @@
                 </label>
                 <label class="payment-option">
                   <input type="radio" name="payment" value="cash" />
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="6" width="20" height="12" rx="2" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
                   <div>
                     <strong>Paiement à la livraison</strong>
                     <span>Espèces ou chèque à réception</span>
@@ -1412,7 +1764,10 @@
                 </label>
                 <label class="payment-option">
                   <input type="radio" name="payment" value="transfer" />
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="12" y1="1" x2="12" y2="23" />
+                    <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                  </svg>
                   <div>
                     <strong>Virement bancaire</strong>
                     <span>RIB communiqué par email</span>
@@ -1442,20 +1797,29 @@
                 </div>
               </div>
               <button class="btn-primary full-width" id="placeOrderBtn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 Confirmer la commande
               </button>
               <button class="btn-ghost full-width" id="backToCartBtn">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
                 Retour au panier
               </button>
               <div class="checkout-trust">
                 <div class="trust-item">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
                   <span>Paiement 100% sécurisé</span>
                 </div>
                 <div class="trust-item">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="1 4 1 10 7 10" />
+                    <path d="M3.51 15a9 9 0 1 0 .49-4" />
+                  </svg>
                   <span>Retours gratuits sous 14 jours</span>
                 </div>
               </div>
@@ -1481,7 +1845,11 @@
         </div>
         <div class="products-grid" id="wishlistGrid"></div>
         <div class="wishlist-empty" id="wishlistEmpty" style="display:none">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+            stroke-linecap="round">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+          </svg>
           <h3>Votre liste de souhaits est vide</h3>
           <p>Cliquez sur le cœur sur n'importe quel produit pour le sauvegarder ici.</p>
           <button class="btn-primary" data-page="marketplace">Découvrir les produits</button>
@@ -1500,12 +1868,17 @@
           <!-- Info column -->
           <div class="contact-info-col">
             <div class="section-eyebrow">Contact</div>
-            <h1 class="contact-title">Parlons de<br/><em>votre projet</em></h1>
-            <p class="contact-intro">Notre équipe est disponible pour répondre à toutes vos questions et vous accompagner dans vos choix de mobilier.</p>
+            <h1 class="contact-title">Parlons de<br /><em>votre projet</em></h1>
+            <p class="contact-intro">Notre équipe est disponible pour répondre à toutes vos questions et vous
+              accompagner dans vos choix de mobilier.</p>
             <div class="contact-details">
               <div class="contact-detail-item">
                 <div class="contact-detail-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
                 </div>
                 <div>
                   <strong>Email</strong>
@@ -1515,7 +1888,11 @@
               </div>
               <div class="contact-detail-item">
                 <div class="contact-detail-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 011.72 1h3a2 2 0 012 1.72 19.56 19.56 0 00.7 2.81 2 2 0 01-.45 2.11L5.09 8.49A16 16 0 0011 14.51l1.27-1.27a2 2 0 012.11-.45 19.56 19.56 0 002.81.7A2 2 0 0119 15.5"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 011.72 1h3a2 2 0 012 1.72 19.56 19.56 0 00.7 2.81 2 2 0 01-.45 2.11L5.09 8.49A16 16 0 0011 14.51l1.27-1.27a2 2 0 012.11-.45 19.56 19.56 0 002.81.7A2 2 0 0119 15.5" />
+                  </svg>
                 </div>
                 <div>
                   <strong>Téléphone</strong>
@@ -1525,7 +1902,11 @@
               </div>
               <div class="contact-detail-item">
                 <div class="contact-detail-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
                 </div>
                 <div>
                   <strong>Adresse</strong>
@@ -1566,11 +1947,15 @@
               </div>
               <div class="form-group">
                 <label>Message</label>
-                <textarea class="form-input" rows="5" placeholder="Décrivez votre demande en détail..." id="contactMessage"></textarea>
+                <textarea class="form-input" rows="5" placeholder="Décrivez votre demande en détail..."
+                  id="contactMessage"></textarea>
               </div>
               <button class="btn-primary full-width" id="contactSubmitBtn">
                 Envoyer le message
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
               </button>
             </div>
           </div>
@@ -1583,5 +1968,5 @@
   <div class="toast-container" id="toastContainer"></div>
 
 </body>
-</html>
 
+</html>

@@ -1540,6 +1540,99 @@ let wishlist = JSON.parse(localStorage.getItem('tf_wishlist') || '[]');
 let lastOrder = null;
 let isLoggedIn = !!sessionStorage.getItem('tf_user');
 let pendingReturnPage = null;
+const VENDOR_APPLICATIONS_KEY = 'tf_vendor_applications';
+
+function getCurrentUser() {
+  try {
+    return JSON.parse(sessionStorage.getItem('tf_user') || 'null');
+  } catch (error) {
+    return null;
+  }
+}
+
+function getVendorApplications() {
+  const fallback = [
+    {
+      id: 'vendor-atelier-benali',
+      name: 'Atelier Benali',
+      email: 'atelier.benali@demo.com',
+      city: 'Tanger',
+      status: 'approved',
+      submittedAt: '2026-05-28'
+    },
+    {
+      id: 'vendor-menuiserie-fassi',
+      name: 'Menuiserie El Fassi',
+      email: 'contact@elfassi.demo',
+      city: 'Fes',
+      status: 'pending',
+      submittedAt: '2026-05-30'
+    }
+  ];
+  try {
+    const stored = JSON.parse(localStorage.getItem(VENDOR_APPLICATIONS_KEY) || 'null');
+    if (Array.isArray(stored)) return stored;
+  } catch (error) {
+    // Fall through to seeded demo data.
+  }
+  localStorage.setItem(VENDOR_APPLICATIONS_KEY, JSON.stringify(fallback));
+  return fallback;
+}
+
+function saveVendorApplications(applications) {
+  localStorage.setItem(VENDOR_APPLICATIONS_KEY, JSON.stringify(applications));
+}
+
+function ensureVendorApplication(user) {
+  if (!user || user.role !== 'vendor') return null;
+  const applications = getVendorApplications();
+  let application = applications.find(app => app.email === user.email);
+  if (!application) {
+    application = {
+      id: `vendor-${Date.now()}`,
+      name: user.name || 'Nouveau vendeur',
+      email: user.email || `${user.name || 'vendeur'}@demo.com`,
+      city: 'Tanger',
+      status: user.email === 'vendor@demo.com' ? 'approved' : 'pending',
+      submittedAt: new Date().toISOString().slice(0, 10)
+    };
+    applications.unshift(application);
+    saveVendorApplications(applications);
+  }
+  user.vendorStatus = application.status;
+  sessionStorage.setItem('tf_user', JSON.stringify(user));
+  return application;
+}
+
+function updateVendorApplicationStatus(id, status) {
+  const applications = getVendorApplications().map(app => (
+    app.id === id ? { ...app, status } : app
+  ));
+  saveVendorApplications(applications);
+  const user = getCurrentUser();
+  const updatedUserApp = user && applications.find(app => app.email === user.email);
+  if (updatedUserApp) {
+    user.vendorStatus = updatedUserApp.status;
+    sessionStorage.setItem('tf_user', JSON.stringify(user));
+  }
+  renderAdminDashboard();
+  showToast(status === 'approved' ? 'Vendeur approuve.' : 'Demande vendeur refusee.', status === 'approved' ? 'success' : 'info');
+}
+
+function getSelectedAuthRole(formId) {
+  const form = document.getElementById(formId);
+  const active = form ? form.querySelector('.role-option.active') : null;
+  return active ? active.dataset.roleOption : 'customer';
+}
+
+function setSelectedAuthRole(role) {
+  document.querySelectorAll('.auth-form-section').forEach(section => {
+    const roleBtn = section.querySelector(`.role-option[data-role-option="${role}"]`);
+    if (!roleBtn) return;
+    section.querySelectorAll('.role-option').forEach(btn => btn.classList.remove('active'));
+    roleBtn.classList.add('active');
+  });
+}
 
 /* ─── CART HELPERS ─── */
 function saveCart() {
@@ -2854,13 +2947,16 @@ function showPage(pageName) {
   const target = document.getElementById(`page-${pageName}`);
   if (target) {
     target.classList.add('active');
+    target.classList.remove('page-enter');
+    void target.offsetWidth;
+    target.classList.add('page-enter');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // Hide navbar on vendor dashboard and auth page; show on all other pages
+  // Hide navbar on protected dashboards and auth page; show on all other pages
   const nav = document.getElementById('mainNav');
   if (nav) {
-    if (pageName === 'vendor' || pageName === 'auth') {
+    if (pageName === 'vendor' || pageName === 'admin' || pageName === 'auth') {
       nav.style.display = 'none';
     } else {
       nav.style.display = '';
@@ -2887,12 +2983,43 @@ function showPage(pageName) {
     if (!isLoggedIn || !sessionStorage.getItem('tf_user')) {
       isLoggedIn = false;
       pendingReturnPage = 'vendor';
+      setSelectedAuthRole('vendor');
       setTimeout(() => showPage('auth'), 0);
       return;
     }
+    const user = getCurrentUser();
+    const application = ensureVendorApplication(user);
+    if (!user || user.role !== 'vendor') {
+      pendingReturnPage = 'vendor';
+      setSelectedAuthRole('vendor');
+      showToast('Connectez-vous avec un compte vendeur.', 'info');
+      setTimeout(() => showPage('auth'), 0);
+      return;
+    }
+    if (!application || application.status !== 'approved') {
+      renderVendorVerificationGate(application);
+      return;
+    }
+    clearVendorVerificationGate();
     switchVendorTab('overview');
     renderAnalyticsChart();
     renderVendorTopProducts();
+  }
+  if (pageName === 'admin') {
+    if (!isLoggedIn || !sessionStorage.getItem('tf_user')) {
+      isLoggedIn = false;
+      pendingReturnPage = 'admin';
+      setSelectedAuthRole('admin');
+      setTimeout(() => showPage('auth'), 0);
+      return;
+    }
+    const user = getCurrentUser();
+    if (!user || user.role !== 'admin') {
+      showToast('Acces reserve aux administrateurs.', 'info');
+      setTimeout(() => showPage('home'), 0);
+      return;
+    }
+    renderAdminDashboard();
   }
   if (pageName === 'tracking') {
     renderTrackingPage();
@@ -2925,29 +3052,38 @@ function switchAuthTab(tab) {
 
 function handleLogin() {
   const emailEl = document.getElementById('loginEmail');
-  const email = emailEl ? emailEl.value.trim() : 'utilisateur';
+  const email = (emailEl ? emailEl.value.trim() : '') || 'utilisateur@demo.com';
   const name = email.split('@')[0] || 'utilisateur';
-  sessionStorage.setItem('tf_user', JSON.stringify({ name }));
+  let role = getSelectedAuthRole('authLoginForm');
+  if (pendingReturnPage === 'vendor') role = 'vendor';
+  if (pendingReturnPage === 'admin') role = 'admin';
+  const user = { name, email, role };
+  if (role === 'vendor') ensureVendorApplication(user);
+  else sessionStorage.setItem('tf_user', JSON.stringify(user));
   isLoggedIn = true;
   updateAuthNav();
   showToast('Connexion réussie ! Bienvenue.', 'success');
-  const returnTo = pendingReturnPage || 'home';
+  const returnTo = pendingReturnPage || (role === 'admin' ? 'admin' : 'home');
   pendingReturnPage = null;
   setTimeout(() => {
     if (returnTo === 'checkout') { renderCheckoutSummary(); }
-    // After login, go to vendor dashboard if that was the intent
-    showPage(returnTo === 'vendor' ? 'vendor' : returnTo);
+    showPage(returnTo);
   }, 900);
 }
 function handleRegister() {
   const nameEl = document.getElementById('registerName');
   const emailEl = document.getElementById('registerEmail');
   const name = (nameEl ? nameEl.value.trim() : '') || 'utilisateur';
-  sessionStorage.setItem('tf_user', JSON.stringify({ name }));
+  const email = (emailEl ? emailEl.value.trim() : '') || `${name.toLowerCase().replace(/\s+/g, '.')}@demo.com`;
+  let role = getSelectedAuthRole('authRegisterForm');
+  if (pendingReturnPage === 'vendor') role = 'vendor';
+  const user = { name, email, role };
+  if (role === 'vendor') ensureVendorApplication(user);
+  else sessionStorage.setItem('tf_user', JSON.stringify(user));
   isLoggedIn = true;
   updateAuthNav();
   showToast('Compte créé avec succès ! Bienvenue sur Tangier Furnish.', 'success');
-  const returnTo = pendingReturnPage || 'home';
+  const returnTo = pendingReturnPage || (role === 'vendor' ? 'vendor' : 'home');
   pendingReturnPage = null;
   setTimeout(() => showPage(returnTo), 900);
 }
@@ -2961,8 +3097,8 @@ function handleLogout() {
 }
 function updateAuthNav() {
   const user = isLoggedIn ? JSON.parse(sessionStorage.getItem('tf_user') || '{}') : null;
-  const loginBtn = document.querySelector('.nav-actions .btn-outline[data-page="auth"]');
-  const registerBtn = document.querySelector('.nav-actions .btn-primary[data-page="auth"]');
+  const loginBtn = document.querySelector('.nav-actions .btn-outline');
+  const registerBtn = document.querySelector('.nav-actions .btn-primary');
   if (loginBtn && registerBtn) {
     if (isLoggedIn && user) {
       loginBtn.textContent = user.name || 'Mon compte';
@@ -2983,11 +3119,98 @@ function updateAuthNav() {
 }
 
 /* ─── ROLE OPTIONS ─── */
+function clearVendorVerificationGate() {
+  const gate = document.getElementById('vendorVerificationGate');
+  if (gate) gate.remove();
+  document.querySelectorAll('.vendor-nav-item').forEach(item => {
+    item.style.pointerEvents = '';
+    item.style.opacity = '';
+  });
+}
+
+function renderVendorVerificationGate(application) {
+  document.querySelectorAll('.vendor-tab').forEach(t => t.style.display = 'none');
+  document.querySelectorAll('.vendor-nav-item').forEach(item => {
+    item.classList.remove('active');
+    item.style.pointerEvents = 'none';
+    item.style.opacity = '0.45';
+  });
+  const main = document.querySelector('#page-vendor .vendor-main');
+  if (!main) return;
+  let gate = document.getElementById('vendorVerificationGate');
+  if (!gate) {
+    gate = document.createElement('div');
+    gate.id = 'vendorVerificationGate';
+    main.prepend(gate);
+  }
+  const status = application && application.status ? application.status : 'pending';
+  const isRejected = status === 'rejected';
+  gate.innerHTML = `
+    <div class="vendor-page-header">
+      <div>
+        <h1>Verification vendeur</h1>
+        <p>${isRejected ? 'Votre demande vendeur doit etre corrigee avant validation.' : 'Votre demande est en cours de verification par un administrateur.'}</p>
+      </div>
+    </div>
+    <div class="verification-panel">
+      <div class="verification-icon ${isRejected ? 'rejected' : 'pending'}">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          ${isRejected ? '<path d="M18 6L6 18M6 6l12 12" />' : '<path d="M12 6v6l4 2" /><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />'}
+        </svg>
+      </div>
+      <div>
+        <h2>${isRejected ? 'Demande refusee' : 'Demande en attente'}</h2>
+        <p>${isRejected ? 'Contactez le support ou soumettez de nouvelles informations pour reactiver votre acces vendeur.' : 'Un administrateur doit approuver ce compte avant que le tableau de bord vendeur soit accessible.'}</p>
+        <div class="verification-meta">
+          <span>Compte: ${application ? application.email : 'vendeur'}</span>
+          <span>Statut: ${status}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderAdminDashboard() {
+  const list = document.getElementById('adminVendorList');
+  if (!list) return;
+  const applications = getVendorApplications();
+  const counts = applications.reduce((acc, app) => {
+    acc[app.status] = (acc[app.status] || 0) + 1;
+    return acc;
+  }, { pending: 0, approved: 0, rejected: 0 });
+  const pendingCount = document.getElementById('adminPendingCount');
+  const approvedCount = document.getElementById('adminApprovedCount');
+  const rejectedCount = document.getElementById('adminRejectedCount');
+  if (pendingCount) pendingCount.textContent = counts.pending || 0;
+  if (approvedCount) approvedCount.textContent = counts.approved || 0;
+  if (rejectedCount) rejectedCount.textContent = counts.rejected || 0;
+
+  list.innerHTML = applications.map((app, index) => `
+    <div class="admin-vendor-row" style="--row-delay:${index * 55}ms">
+      <div class="admin-vendor-main">
+        <strong>${app.name}</strong>
+        <span>${app.email} - ${app.city} - ${app.submittedAt}</span>
+      </div>
+      <span class="verification-status ${app.status}">${app.status}</span>
+      <div class="admin-vendor-actions">
+        <button class="btn-outline small" data-vendor-verify="${app.id}" data-status="rejected">Refuser</button>
+        <button class="btn-primary small" data-vendor-verify="${app.id}" data-status="approved">Approuver</button>
+      </div>
+    </div>
+  `).join('');
+}
+
 document.addEventListener('click', (e) => {
   const roleBtn = e.target.closest('.role-option');
   if (roleBtn) {
     roleBtn.parentElement.querySelectorAll('.role-option').forEach(b => b.classList.remove('active'));
     roleBtn.classList.add('active');
+  }
+  const verifyBtn = e.target.closest('[data-vendor-verify]');
+  if (verifyBtn) {
+    e.preventDefault();
+    updateVendorApplicationStatus(verifyBtn.dataset.vendorVerify, verifyBtn.dataset.status);
+    return;
   }
   // Global navigation via data-page attribute
   const pageEl = e.target.closest('[data-page]');
@@ -3005,6 +3228,7 @@ document.addEventListener('click', (e) => {
       // Guard: redirect to login if not authenticated
       if (!isLoggedIn) {
         pendingReturnPage = 'vendor';
+        setSelectedAuthRole('vendor');
         showToast('Connectez-vous pour accéder au tableau de bord.', 'info');
         setTimeout(() => showPage('auth'), 400);
       } else {
@@ -3369,6 +3593,8 @@ function wireStaticButtons() {
   // Vendor sidebar logout button — clears session and forces re-login
   const vendorLogoutBtn = document.getElementById('vendorLogoutBtn');
   if (vendorLogoutBtn) vendorLogoutBtn.addEventListener('click', handleLogout);
+  const adminLogoutBtn = document.getElementById('adminLogoutBtn');
+  if (adminLogoutBtn) adminLogoutBtn.addEventListener('click', handleLogout);
 
   // Demo account: fill credentials automatically (button removed from UI)
   // Kept for programmatic use only — no DOM binding needed
@@ -3496,4 +3722,3 @@ document.addEventListener('click', (e) => {
     link.style.transition = 'color 0.22s ease';
   });
 })();
-
