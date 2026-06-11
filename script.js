@@ -3050,6 +3050,10 @@ function switchAuthTab(tab) {
   if (registerForm) registerForm.style.display = tab === 'register' ? 'block' : 'none';
 }
 
+function handleAuthBack() {
+  window.location.href = 'index.html?skipLoader=true';
+}
+
 function handleLogin() {
   const emailEl = document.getElementById('loginEmail');
   const email = (emailEl ? emailEl.value.trim() : '') || 'utilisateur@demo.com';
@@ -3513,7 +3517,13 @@ function initCategoryCountsDOM() {
 /* ─── LOADER ─── */
 function hideLoader() {
   const loader = document.getElementById('loader');
+  const params = new URLSearchParams(window.location.search);
+  const skipLoader = params.get('skipLoader') === 'true';
   if (loader) {
+    if (skipLoader) {
+      loader.style.display = 'none';
+      return;
+    }
     setTimeout(() => {
       loader.classList.add('hidden');
       animateCounters();
@@ -3587,8 +3597,10 @@ function wireStaticButtons() {
   // Auth buttons
   const loginBtn = document.getElementById('loginBtn');
   const registerBtn = document.getElementById('registerBtn');
+  const authBackBtn = document.getElementById('authBackBtn');
   if (loginBtn) loginBtn.addEventListener('click', handleLogin);
   if (registerBtn) registerBtn.addEventListener('click', handleRegister);
+  if (authBackBtn) authBackBtn.addEventListener('click', handleAuthBack);
 
   // Vendor sidebar logout button — clears session and forces re-login
   const vendorLogoutBtn = document.getElementById('vendorLogoutBtn');
