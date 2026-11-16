@@ -1,3 +1,4 @@
+/* Feather icons v4.29.2: Copyright (c) 2013-2023 Cole Bemis. MIT; retain licenses/FEATHER-MIT.txt with copies. Icon geometry is third-party, nonexclusive. */
 /* ============================================================
    TANGIER FURNISH — script.js
    Full frontend logic: products, cart, filters, routing
@@ -14,7 +15,7 @@ const PRODUCTS = [
     name: 'Canapé Riad Crème',
     category: 'Salon',
     vendor: 'Atelier Benali',
-    vendorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 8900,
     oldPrice: null,
@@ -36,7 +37,7 @@ const PRODUCTS = [
     name: 'Fauteuil Palmier',
     category: 'Salon',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 4800,
     oldPrice: null,
@@ -57,7 +58,7 @@ const PRODUCTS = [
     name: 'Canapé Velours Sable',
     category: 'Salon',
     vendor: 'Atelier Benali',
-    vendorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 11200,
     oldPrice: 13500,
@@ -79,7 +80,7 @@ const PRODUCTS = [
     name: 'Méridienne Jasmin',
     category: 'Salon',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 6300,
     oldPrice: null,
@@ -100,7 +101,7 @@ const PRODUCTS = [
     name: 'Pouf Cuir Artisanal',
     category: 'Salon',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 1850,
     oldPrice: null,
@@ -121,7 +122,7 @@ const PRODUCTS = [
     name: 'Table Basse Médina',
     category: 'Salon',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 3400,
     oldPrice: 3900,
@@ -142,7 +143,7 @@ const PRODUCTS = [
     name: 'Canapé d\'Angle Ksar',
     category: 'Salon',
     vendor: 'Atelier Benali',
-    vendorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 18500,
     oldPrice: 22000,
@@ -164,7 +165,7 @@ const PRODUCTS = [
     name: 'Meuble TV Bois & Métal',
     category: 'Salon',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 5200,
     oldPrice: null,
@@ -185,7 +186,7 @@ const PRODUCTS = [
     name: 'Canapé 2 Places Bohème',
     category: 'Salon',
     vendor: 'Atelier Benali',
-    vendorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 7400,
     oldPrice: 8900,
@@ -206,7 +207,7 @@ const PRODUCTS = [
     name: 'Table d\'Appoint Laiton',
     category: 'Salon',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 1900,
     oldPrice: null,
@@ -229,7 +230,7 @@ const PRODUCTS = [
     name: 'Lit Kasbah Cèdre',
     category: 'Chambre',
     vendor: 'Atelier Benali',
-    vendorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 16800,
     oldPrice: null,
@@ -251,7 +252,7 @@ const PRODUCTS = [
     name: 'Commode Sculptée Andalouse',
     category: 'Chambre',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 7200,
     oldPrice: null,
@@ -272,7 +273,7 @@ const PRODUCTS = [
     name: 'Table de Nuit Atlas',
     category: 'Chambre',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 2800,
     oldPrice: null,
@@ -293,7 +294,7 @@ const PRODUCTS = [
     name: 'Lit Double avec Rangement Intégré',
     category: 'Chambre',
     vendor: 'Atelier Benali',
-    vendorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 12400,
     oldPrice: 14800,
@@ -315,7 +316,7 @@ const PRODUCTS = [
     name: 'Armoire Cèdre Atlas 4 Portes',
     category: 'Chambre',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 21500,
     oldPrice: null,
@@ -336,7 +337,7 @@ const PRODUCTS = [
     name: 'Lit Tête Rembourrée Luxe',
     category: 'Chambre',
     vendor: 'Atelier Benali',
-    vendorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 9800,
     oldPrice: 11500,
@@ -357,7 +358,7 @@ const PRODUCTS = [
     name: 'Miroir Chambre Grand Format',
     category: 'Chambre',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 2400,
     oldPrice: null,
@@ -378,7 +379,7 @@ const PRODUCTS = [
     name: 'Coiffeuse avec Miroir Éclairé',
     category: 'Chambre',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 4600,
     oldPrice: null,
@@ -401,7 +402,7 @@ const PRODUCTS = [
     name: 'Table Salle à Manger 8 Pers.',
     category: 'Salle à manger',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 9800,
     oldPrice: null,
@@ -422,7 +423,7 @@ const PRODUCTS = [
     name: 'Buffet Médina Noyer',
     category: 'Salle à manger',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 8600,
     oldPrice: null,
@@ -443,7 +444,7 @@ const PRODUCTS = [
     name: 'Chaises Design Chêne — Lot 4',
     category: 'Salle à manger',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 5600,
     oldPrice: null,
@@ -464,7 +465,7 @@ const PRODUCTS = [
     name: 'Ensemble Table 6 Places',
     category: 'Salle à manger',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 15800,
     oldPrice: 19000,
@@ -485,7 +486,7 @@ const PRODUCTS = [
     name: 'Vaisselier Moderne Chêne',
     category: 'Salle à manger',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 6900,
     oldPrice: null,
@@ -508,7 +509,7 @@ const PRODUCTS = [
     name: 'Suspension Laiton Ciselé',
     category: 'Éclairage',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 2200,
     oldPrice: null,
@@ -529,7 +530,7 @@ const PRODUCTS = [
     name: 'Suspension Cuivre Martelé',
     category: 'Éclairage',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 3400,
     oldPrice: null,
@@ -550,7 +551,7 @@ const PRODUCTS = [
     name: 'Lanterne Fès Ciselée',
     category: 'Éclairage',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 1680,
     oldPrice: null,
@@ -571,7 +572,7 @@ const PRODUCTS = [
     name: 'Lustre Géométrique Multi-Branches',
     category: 'Éclairage',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 4800,
     oldPrice: 5600,
@@ -592,7 +593,7 @@ const PRODUCTS = [
     name: 'Lampadaire Lin & Laiton',
     category: 'Éclairage',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 2800,
     oldPrice: null,
@@ -613,7 +614,7 @@ const PRODUCTS = [
     name: 'Applique Murale Rotin',
     category: 'Éclairage',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 1200,
     oldPrice: null,
@@ -634,7 +635,7 @@ const PRODUCTS = [
     name: 'Guirlande Lumineuse LED Or',
     category: 'Éclairage',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 480,
     oldPrice: null,
@@ -657,7 +658,7 @@ const PRODUCTS = [
     name: 'Vase Céramique Safi',
     category: 'Décoration',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Safi',
     price: 680,
     oldPrice: null,
@@ -678,7 +679,7 @@ const PRODUCTS = [
     name: 'Coussin Brodé Berbère',
     category: 'Décoration',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 420,
     oldPrice: null,
@@ -699,7 +700,7 @@ const PRODUCTS = [
     name: 'Miroir Arabesque Doré',
     category: 'Décoration',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 2900,
     oldPrice: null,
@@ -720,7 +721,7 @@ const PRODUCTS = [
     name: 'Plateau Tadelakt Noir',
     category: 'Décoration',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 850,
     oldPrice: null,
@@ -741,7 +742,7 @@ const PRODUCTS = [
     name: 'Plante Verte Intérieure',
     category: 'Décoration',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 750,
     oldPrice: null,
@@ -762,7 +763,7 @@ const PRODUCTS = [
     name: 'Bougeoirs Trio Laiton',
     category: 'Décoration',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 1200,
     oldPrice: null,
@@ -783,7 +784,7 @@ const PRODUCTS = [
     name: 'Tableau Calligraphie Arabe',
     category: 'Décoration',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 2400,
     oldPrice: null,
@@ -806,7 +807,7 @@ const PRODUCTS = [
     name: 'Bureau Médina Noyer',
     category: 'Bureau',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 6400,
     oldPrice: 7200,
@@ -828,7 +829,7 @@ const PRODUCTS = [
     name: 'Bibliothèque Chêne Massif',
     category: 'Bureau',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 9200,
     oldPrice: null,
@@ -849,7 +850,7 @@ const PRODUCTS = [
     name: 'Bureau Secrétaire Wengé',
     category: 'Bureau',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 8100,
     oldPrice: null,
@@ -870,7 +871,7 @@ const PRODUCTS = [
     name: 'Chaise Bureau Ergonomique',
     category: 'Bureau',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 4200,
     oldPrice: 5100,
@@ -891,7 +892,7 @@ const PRODUCTS = [
     name: 'Bureau Compact Home Office',
     category: 'Bureau',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 3800,
     oldPrice: null,
@@ -914,7 +915,7 @@ const PRODUCTS = [
     name: 'Îlot Cuisine Central',
     category: 'Cuisine',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 18500,
     oldPrice: 22000,
@@ -936,7 +937,7 @@ const PRODUCTS = [
     name: 'Cuisine Équipée Chêne',
     category: 'Cuisine',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 24000,
     oldPrice: 28000,
@@ -957,7 +958,7 @@ const PRODUCTS = [
     name: 'Tabouret de Bar Chêne',
     category: 'Cuisine',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 1600,
     oldPrice: null,
@@ -978,7 +979,7 @@ const PRODUCTS = [
     name: 'Table Cuisine avec Banc',
     category: 'Cuisine',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 8900,
     oldPrice: null,
@@ -999,7 +1000,7 @@ const PRODUCTS = [
     name: 'Meubles Cuisine Blanc Laqué',
     category: 'Cuisine',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 6400,
     oldPrice: 7800,
@@ -1020,7 +1021,7 @@ const PRODUCTS = [
     name: 'Étagère Ouverte Cuisine',
     category: 'Cuisine',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 2800,
     oldPrice: null,
@@ -1041,7 +1042,7 @@ const PRODUCTS = [
     name: 'Cuisine Minimaliste Complète',
     category: 'Cuisine',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 32000,
     oldPrice: null,
@@ -1064,7 +1065,7 @@ const PRODUCTS = [
     name: 'Meuble Vasque Double Teck',
     category: 'Salle de bain',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 14500,
     oldPrice: 17000,
@@ -1078,7 +1079,7 @@ const PRODUCTS = [
       'https://images.pexels.com/photos/7045358/pexels-photo-7045358.jpeg?auto=compress&cs=tinysrgb&w=800',
       'https://images.pexels.com/photos/7534564/pexels-photo-7534564.jpeg?auto=compress&cs=tinysrgb&w=800',
     ],
-    description: 'Meuble vasque double 120 cm en teck naturel huilé, 2 vasques encastrées en céramique blanche. 4 tiroirs à fermeture douce. Traitement résistant à l\'humidité, garantie 5 ans.',
+    description: 'Meuble vasque double 120 cm en teck naturel huilé, 2 vasques encastrées en céramique blanche. 4 tiroirs à fermeture douce. Traitement résistant à l\'humidité, caractéristique fictive.',
     colors: ['#c4a882', '#f5f0e8', '#2c2018'],
   },
   {
@@ -1086,7 +1087,7 @@ const PRODUCTS = [
     name: 'Miroir Salle de Bain LED',
     category: 'Salle de bain',
     vendor: 'Luminaires Tanger',
-    vendorImg: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Tanger',
     price: 3800,
     oldPrice: null,
@@ -1107,7 +1108,7 @@ const PRODUCTS = [
     name: 'Armoire Salle de Bain Blanc',
     category: 'Salle de bain',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 4200,
     oldPrice: null,
@@ -1120,7 +1121,7 @@ const PRODUCTS = [
     images: [
       'https://images.pexels.com/photos/6480198/pexels-photo-6480198.jpeg?auto=compress&cs=tinysrgb&w=800',
     ],
-    description: 'Armoire de salle de bain suspendue en MDF blanc laqué, 2 portes miroir et 3 étagères internes. Dimensions 60×70 cm. Traitement anti-humidité garanti 5 ans.',
+    description: 'Armoire de salle de bain suspendue en MDF blanc laqué, 2 portes miroir et 3 étagères internes. Dimensions 60×70 cm. Traitement anti-humidité illustratif.',
     colors: ['#f5f0e8', '#8b8b8b'],
   },
   {
@@ -1128,7 +1129,7 @@ const PRODUCTS = [
     name: 'Ensemble Bain Tadelakt',
     category: 'Salle de bain',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 5600,
     oldPrice: null,
@@ -1149,7 +1150,7 @@ const PRODUCTS = [
     name: 'Salle de Bain Complète',
     category: 'Salle de bain',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 8900,
     oldPrice: null,
@@ -1170,7 +1171,7 @@ const PRODUCTS = [
     name: 'Baignoire Îlot Moderne',
     category: 'Salle de bain',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 19500,
     oldPrice: null,
@@ -1193,7 +1194,7 @@ const PRODUCTS = [
     name: 'Tapis Zellige Berbère',
     category: 'Tapis',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 3600,
     oldPrice: null,
@@ -1214,7 +1215,7 @@ const PRODUCTS = [
     name: 'Tapis Berbère Azilal',
     category: 'Tapis',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 4800,
     oldPrice: null,
@@ -1235,7 +1236,7 @@ const PRODUCTS = [
     name: 'Tapis Salon Géométrique',
     category: 'Tapis',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 2900,
     oldPrice: 3400,
@@ -1256,7 +1257,7 @@ const PRODUCTS = [
     name: 'Tapis Shaggy Doux',
     category: 'Tapis',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 1900,
     oldPrice: null,
@@ -1277,7 +1278,7 @@ const PRODUCTS = [
     name: 'Tapis Entrée Artisanal',
     category: 'Tapis',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 890,
     oldPrice: null,
@@ -1298,7 +1299,7 @@ const PRODUCTS = [
     name: 'Tapis Scandinave Moderne',
     category: 'Tapis',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 2200,
     oldPrice: null,
@@ -1321,7 +1322,7 @@ const PRODUCTS = [
     name: 'Rideau Lin Naturel',
     category: 'Rideaux',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 1800,
     oldPrice: null,
@@ -1342,7 +1343,7 @@ const PRODUCTS = [
     name: 'Store Enrouleur Bambou',
     category: 'Rideaux',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 950,
     oldPrice: null,
@@ -1363,7 +1364,7 @@ const PRODUCTS = [
     name: 'Rideau Occultant Velours',
     category: 'Rideaux',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 2400,
     oldPrice: 2800,
@@ -1384,7 +1385,7 @@ const PRODUCTS = [
     name: 'Voilage Transparent Coton',
     category: 'Rideaux',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Rabat',
     price: 680,
     oldPrice: null,
@@ -1405,7 +1406,7 @@ const PRODUCTS = [
     name: 'Rideau Panneau Japonais',
     category: 'Rideaux',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 1400,
     oldPrice: null,
@@ -1428,7 +1429,7 @@ const PRODUCTS = [
     name: 'Dressing Modulable Chêne',
     category: 'Rangement',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 9800,
     oldPrice: 12000,
@@ -1449,7 +1450,7 @@ const PRODUCTS = [
     name: 'Meuble Chaussures 16 Paires',
     category: 'Rangement',
     vendor: 'Design Nordik Maroc',
-    vendorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Casablanca',
     price: 2600,
     oldPrice: null,
@@ -1470,7 +1471,7 @@ const PRODUCTS = [
     name: 'Cubes de Rangement Empilables',
     category: 'Rangement',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 1400,
     oldPrice: null,
@@ -1491,7 +1492,7 @@ const PRODUCTS = [
     name: 'Coffre Ottoman Multifonction',
     category: 'Rangement',
     vendor: 'Artisanat Marrakech',
-    vendorImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Marrakech',
     price: 2100,
     oldPrice: null,
@@ -1512,7 +1513,7 @@ const PRODUCTS = [
     name: 'Commode 6 Tiroirs Naturelle',
     category: 'Rangement',
     vendor: 'Menuiserie El Fassi',
-    vendorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80',
+    vendorImg: 'assets/demo-avatar.svg',
     city: 'Fès',
     price: 4800,
     oldPrice: 5600,
@@ -1530,32 +1531,56 @@ const PRODUCTS = [
   },
 ];
 
+
+// Browser state is untrusted. Only catalog IDs and bounded quantities are restored.
+function escapeHTML(value) {
+  return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function readDemo(storage, key, fallback) {
+  try { return JSON.parse(window[storage].getItem(key)) ?? fallback; } catch { return fallback; }
+}
+function writeDemo(storage, key, value) {
+  try { window[storage].setItem(key, JSON.stringify(value)); }
+  catch { showToast('Stockage indisponible : les changements restent dans cette page.', 'info'); }
+}
+function restoreCart() {
+  const saved = readDemo('localStorage', 'tf_cart', []);
+  if (!Array.isArray(saved)) return [];
+  const result = [];
+  saved.forEach(item => {
+    const p = item && PRODUCTS.find(p => p.id === item.id && p.stock > 0);
+    if (!p || result.some(row => row.id === p.id) || !Number.isInteger(item.qty) || item.qty < 1) return;
+    result.push({id:p.id, name:p.name, vendor:p.vendor, price:p.price, image:p.image, qty:Math.min(p.stock, item.qty)});
+  });
+  return result;
+}
+function restoreWishlist() {
+  const saved = readDemo('localStorage', 'tf_wishlist', []);
+  return Array.isArray(saved) ? [...new Set(saved.filter(id => PRODUCTS.some(p => p.id === id)))] : [];
+}
+let demoUser = null; // Deliberately no identity or privilege restored from legacy sessions.
+try { sessionStorage.removeItem('tf_user'); } catch {}
+
 /* ─── STATE ─── */
-let cart = JSON.parse(localStorage.getItem('tf_cart') || '[]');
+let cart = restoreCart();
 let activeFilters = { cat: '', city: '', minPrice: 0, maxPrice: Infinity, inStock: false, search: '' };
 let currentSort = 'default';
 let currentProductId = null;
 let currentQty = 1;
-let wishlist = JSON.parse(localStorage.getItem('tf_wishlist') || '[]');
+let wishlist = restoreWishlist();
 let lastOrder = null;
-let isLoggedIn = !!sessionStorage.getItem('tf_user');
+let isLoggedIn = false;
 let pendingReturnPage = null;
-const VENDOR_APPLICATIONS_KEY = 'tf_vendor_applications';
 
-function getCurrentUser() {
-  try {
-    return JSON.parse(sessionStorage.getItem('tf_user') || 'null');
-  } catch (error) {
-    return null;
-  }
-}
+
+function getCurrentUser() { return demoUser; }
 
 function getVendorApplications() {
   const fallback = [
     {
       id: 'vendor-atelier-benali',
       name: 'Atelier Benali',
-      email: 'atelier.benali@demo.com',
+      email: 'atelier.benali@example.invalid',
       city: 'Tanger',
       status: 'approved',
       submittedAt: '2026-05-28'
@@ -1563,60 +1588,20 @@ function getVendorApplications() {
     {
       id: 'vendor-menuiserie-fassi',
       name: 'Menuiserie El Fassi',
-      email: 'contact@elfassi.demo',
+      email: 'contact@example.invalid',
       city: 'Fes',
       status: 'pending',
       submittedAt: '2026-05-30'
     }
   ];
   try {
-    const stored = JSON.parse(localStorage.getItem(VENDOR_APPLICATIONS_KEY) || 'null');
+    const stored = null;
     if (Array.isArray(stored)) return stored;
   } catch (error) {
     // Fall through to seeded demo data.
   }
-  localStorage.setItem(VENDOR_APPLICATIONS_KEY, JSON.stringify(fallback));
+
   return fallback;
-}
-
-function saveVendorApplications(applications) {
-  localStorage.setItem(VENDOR_APPLICATIONS_KEY, JSON.stringify(applications));
-}
-
-function ensureVendorApplication(user) {
-  if (!user || user.role !== 'vendor') return null;
-  const applications = getVendorApplications();
-  let application = applications.find(app => app.email === user.email);
-  if (!application) {
-    application = {
-      id: `vendor-${Date.now()}`,
-      name: user.name || 'Nouveau vendeur',
-      email: user.email || `${user.name || 'vendeur'}@demo.com`,
-      city: 'Tanger',
-      status: user.email === 'vendor@demo.com' ? 'approved' : 'pending',
-      submittedAt: new Date().toISOString().slice(0, 10)
-    };
-    applications.unshift(application);
-    saveVendorApplications(applications);
-  }
-  user.vendorStatus = application.status;
-  sessionStorage.setItem('tf_user', JSON.stringify(user));
-  return application;
-}
-
-function updateVendorApplicationStatus(id, status) {
-  const applications = getVendorApplications().map(app => (
-    app.id === id ? { ...app, status } : app
-  ));
-  saveVendorApplications(applications);
-  const user = getCurrentUser();
-  const updatedUserApp = user && applications.find(app => app.email === user.email);
-  if (updatedUserApp) {
-    user.vendorStatus = updatedUserApp.status;
-    sessionStorage.setItem('tf_user', JSON.stringify(user));
-  }
-  renderAdminDashboard();
-  showToast(status === 'approved' ? 'Vendeur approuve.' : 'Demande vendeur refusee.', status === 'approved' ? 'success' : 'info');
 }
 
 function getSelectedAuthRole(formId) {
@@ -1636,7 +1621,7 @@ function setSelectedAuthRole(role) {
 
 /* ─── CART HELPERS ─── */
 function saveCart() {
-  localStorage.setItem('tf_cart', JSON.stringify(cart));
+  writeDemo('localStorage', 'tf_cart', cart.map(({id, qty}) => ({id, qty})));
 }
 function getCartTotal() {
   return cart.reduce((sum, item) => sum + item.price * item.qty, 0);
@@ -1659,17 +1644,12 @@ function updateCartUI() {
 }
 
 function addToCart(productId, qty = 1, sourceEl = null) {
-  if (!isLoggedIn) {
-    pendingReturnPage = 'marketplace';
-    showToast('Connectez-vous pour ajouter au panier.', 'info');
-    setTimeout(() => showPage('auth'), 600);
-    return;
-  }
   const product = PRODUCTS.find(p => p.id === productId);
-  if (!product) return;
+  if (!product || product.stock < 1) { showToast('Stock de démonstration épuisé.', 'info'); return; }
+  qty = Number.isInteger(qty) && qty > 0 ? Math.min(qty, product.stock) : 1;
   const existing = cart.find(item => item.id === productId);
   if (existing) {
-    existing.qty += qty;
+    existing.qty = Math.min(product.stock, existing.qty + qty);
   } else {
     cart.push({ id: product.id, name: product.name, vendor: product.vendor, price: product.price, image: product.image, qty });
   }
@@ -1691,7 +1671,7 @@ function updateCartQty(productId, delta) {
   if (!item) return;
   const newQty = item.qty + delta;
   if (newQty < 1) { removeFromCart(productId); return; }
-  item.qty = newQty;
+  item.qty = Math.min(PRODUCTS.find(p => p.id === productId).stock, newQty);
   saveCart();
   updateCartUI();
 }
@@ -1724,15 +1704,15 @@ function renderCartItems() {
         <div class="cart-item-name">${item.name}</div>
         <div class="cart-item-vendor">${item.vendor}</div>
         <div class="cart-item-qty">
-          <button class="cart-qty-btn" data-id="${item.id}" data-delta="-1">−</button>
+          <button aria-label="Modifier la quantité" class="cart-qty-btn" data-id="${item.id}" data-delta="-1">−</button>
           <span class="cart-qty-value">${item.qty}</span>
-          <button class="cart-qty-btn" data-id="${item.id}" data-delta="1">+</button>
+          <button aria-label="Modifier la quantité" class="cart-qty-btn" data-id="${item.id}" data-delta="1">+</button>
         </div>
       </div>
       <div class="cart-item-right">
         <div class="cart-item-price">${formatPrice(item.price * item.qty)}</div>
         <button class="cart-remove-btn" data-id="${item.id}">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-feather-source="trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
           Retirer
         </button>
       </div>
@@ -1757,13 +1737,24 @@ function renderCartItems() {
   if (totalEl) totalEl.textContent = formatPrice(total);
 }
 
+let cartReturnFocus = null;
 function openCart() {
   document.getElementById('cartOverlay').classList.add('open');
   document.getElementById('cartDrawer').classList.add('open');
   document.body.style.overflow = 'hidden';
+  cartReturnFocus = document.activeElement;
+  document.getElementById('cartDrawer').setAttribute('role', 'dialog');
+  document.getElementById('cartDrawer').setAttribute('aria-modal', 'true');
+  // Move focus once the sliding drawer has entered the viewport.
+  setTimeout(() => {
+    if (document.getElementById('cartDrawer').classList.contains('open')) document.getElementById('cartCloseBtn').focus({preventScroll:true});
+  }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450);
 }
 
 function closeCart() {
+  const wasOpen = document.getElementById('cartDrawer').classList.contains('open');
+  document.getElementById('cartDrawer').removeAttribute('aria-modal');
+  if (wasOpen && cartReturnFocus?.isConnected) cartReturnFocus.focus();
   document.getElementById('cartOverlay').classList.remove('open');
   document.getElementById('cartDrawer').classList.remove('open');
   document.body.style.overflow = '';
@@ -1771,16 +1762,8 @@ function closeCart() {
 
 /* ─── CHECKOUT ─── */
 function handleCheckout() {
-  if (cart.length === 0) return;
-  if (!isLoggedIn) {
-    closeCart();
-    pendingReturnPage = 'checkout';
-    showToast('Connectez-vous pour finaliser votre commande.', 'info');
-    setTimeout(() => showPage('auth'), 600);
-    return;
-  }
+  if (!cart.length) { showToast('Votre panier est vide.', 'info'); return; }
   closeCart();
-  renderCheckoutSummary();
   showPage('checkout');
 }
 
@@ -1821,6 +1804,7 @@ function updateCheckoutDelivery() {
 }
 
 function handlePlaceOrder() {
+  if (!cart.length) { showToast('Ajoutez un produit pour lancer la simulation.', 'info'); return; }
   const firstName = document.getElementById('checkoutFirstName');
   const lastName = document.getElementById('checkoutLastName');
   const phone = document.getElementById('checkoutPhone');
@@ -1848,7 +1832,7 @@ function handlePlaceOrder() {
 
   const orderItems = cart.map(item => ({ ...item }));
   const orderTotal = getCartTotal() + fee;
-  const orderNum = 'TF-' + new Date().getFullYear() + '-' + String(Date.now()).slice(-5);
+  const orderNum = 'DEMO-' + new Date().getFullYear() + '-' + String(Date.now()).slice(-5);
 
   lastOrder = {
     number: orderNum,
@@ -1865,7 +1849,7 @@ function handlePlaceOrder() {
 
   renderConfirmationPage(lastOrder);
   showPage('confirmation');
-  showToast('Commande confirmée ! Merci pour votre achat.', 'success');
+  showToast('Simulation terminée. Aucun paiement, aucune commande réelle, aucun email envoyé.', 'success');
 }
 
 function renderConfirmationPage(order) {
@@ -1903,11 +1887,11 @@ function renderStars(rating) {
   let html = '';
   for (let i = 0; i < 5; i++) {
     if (i < full) {
-      html += `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
+      html += `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" data-feather-source="star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
     } else if (i === full && half) {
-      html += `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
+      html += `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.5" data-feather-source="star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
     } else {
-      html += `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
+      html += `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-feather-source="star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
     }
   }
   return html;
@@ -1944,9 +1928,7 @@ function createProductCard(product, skeletonMode = false) {
       ${product.badge ? `<span class="product-badge${product.isNew ? ' new' : ''}">${product.badge}</span>` : ''}
       ${discountPct > 0 ? `<span class="product-badge discount">-${discountPct}%</span>` : ''}
       <button class="product-wishlist-btn${isWishlisted ? ' active' : ''}" data-id="${product.id}" aria-label="Favoris">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.5">
-          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-        </svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.5" data-feather-source="heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
       </button>
       <div class="product-card-overlay"><span>Voir le produit</span></div>
     </div>
@@ -1954,7 +1936,7 @@ function createProductCard(product, skeletonMode = false) {
       <div class="product-meta">
         <span class="product-category">${product.category}</span>
         <span class="product-city">
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-feather-source="map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           ${product.city}
         </span>
       </div>
@@ -1962,7 +1944,7 @@ function createProductCard(product, skeletonMode = false) {
       <div class="product-vendor">${product.vendor}</div>
       <div class="product-rating">
         <div class="product-stars">${renderStars(product.rating)}</div>
-        <span class="product-rating-count">(${product.reviews})</span>
+        <span class="product-rating-count">(${product.reviews} fictifs)</span>
       </div>
       <div class="product-card-footer">
         <div class="product-price-wrap">
@@ -1970,7 +1952,7 @@ function createProductCard(product, skeletonMode = false) {
           ${product.oldPrice ? `<div class="product-price-old">${formatPrice(product.oldPrice)}</div>` : ''}
         </div>
         <button class="add-to-cart-btn" data-id="${product.id}" aria-label="Ajouter au panier">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-feather-source="plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
         </button>
       </div>
     </div>
@@ -1985,12 +1967,16 @@ function createProductCard(product, skeletonMode = false) {
     e.stopPropagation();
     toggleWishlistCard(e.currentTarget, product.id);
   });
+  el.tabIndex = 0;
+  el.setAttribute('aria-label', 'Voir ' + product.name);
+  el.addEventListener('keydown', e => { if (e.target === el && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openProduct(product.id); } });
   el.addEventListener('click', () => openProduct(product.id));
 
   return el;
 }
 
 function toggleWishlistCard(btn, productId) {
+  if (!PRODUCTS.some(p => p.id === productId)) return;
   const idx = wishlist.indexOf(productId);
   if (idx === -1) {
     wishlist.push(productId);
@@ -1999,8 +1985,9 @@ function toggleWishlistCard(btn, productId) {
     wishlist.splice(idx, 1);
     showToast('Retiré de votre liste de souhaits');
   }
-  localStorage.setItem('tf_wishlist', JSON.stringify(wishlist));
+  writeDemo('localStorage', 'tf_wishlist', wishlist);
   updateWishlistNavCount();
+  if (document.getElementById('page-wishlist').classList.contains('active')) renderWishlistPage();
   const isWishlisted = wishlist.includes(productId);
   // Update ALL wishlist buttons for this product across the page
   document.querySelectorAll(`.product-wishlist-btn[data-id="${productId}"]`).forEach(b => {
@@ -2183,7 +2170,7 @@ function initNavSearch() {
 
   function highlight(text, query) {
     const esc = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return text.replace(new RegExp(`(${esc})`, 'gi'), '<mark>$1</mark>');
+    return escapeHTML(text); // Catalog text only; no HTML from search queries.
   }
 
   function renderNavResults(results, query) {
@@ -2191,7 +2178,7 @@ function initNavSearch() {
     dropdown.hidden = false;
 
     if (results.length === 0) {
-      dropdown.innerHTML = `<div class="nav-search-empty">Aucun résultat pour <strong>« ${query} »</strong></div>`;
+      dropdown.innerHTML = `<div class="nav-search-empty">Aucun résultat pour <strong>« ${escapeHTML(query)} »</strong></div>`;
       return;
     }
 
@@ -2456,9 +2443,9 @@ function updateActiveFilterTags() {
   wrap.style.display = activeTags.length > 0 ? 'flex' : 'none';
   tags.innerHTML = activeTags.map(tag => `
     <span class="filter-tag">
-      ${tag.label}
+      ${escapeHTML(tag.label)}
       <button class="filter-tag-remove" data-key="${tag.key}">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" data-feather-source="x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
     </span>
   `).join('');
@@ -2495,8 +2482,16 @@ function renderMarketplaceGrid(products) {
 }
 
 /* ─── MOBILE FILTERS ─── */
+let filterReturnFocus = null;
 function openMobileFilters() {
-  document.getElementById('filtersSidebar').classList.add('open');
+  if (document.getElementById('mobileFilterOverlay')) return;
+  const sidebar = document.getElementById('filtersSidebar');
+  filterReturnFocus = document.activeElement;
+  sidebar.classList.add('open');
+  sidebar.setAttribute('role', 'dialog');
+  sidebar.setAttribute('aria-modal', 'true');
+  sidebar.setAttribute('aria-label', 'Filtres du catalogue');
+  setTimeout(() => { if (sidebar.classList.contains('open')) document.getElementById('resetFiltersBtn').focus({preventScroll:true}); }, 450);
   document.body.style.overflow = 'hidden';
   const overlay = document.createElement('div');
   overlay.id = 'mobileFilterOverlay';
@@ -2505,7 +2500,12 @@ function openMobileFilters() {
   document.body.appendChild(overlay);
 }
 function closeMobileFilters() {
-  document.getElementById('filtersSidebar').classList.remove('open');
+  const sidebar = document.getElementById('filtersSidebar');
+  const wasOpen = sidebar.classList.contains('open');
+  sidebar.classList.remove('open');
+  sidebar.removeAttribute('role');
+  sidebar.removeAttribute('aria-modal');
+  if (wasOpen && filterReturnFocus?.isConnected) filterReturnFocus.focus({preventScroll:true});
   document.body.style.overflow = '';
   const overlay = document.getElementById('mobileFilterOverlay');
   if (overlay) overlay.remove();
@@ -2549,19 +2549,19 @@ function openProduct(productId) {
     if (desc.includes('rotin') || desc.includes('naturel')) matList.push({ name: 'Fibres naturelles', detail: 'Rotin ou osier tressé main', icon: 'wind' });
     if (matList.length < 2) {
       matList.push({ name: 'Finition artisanale', detail: 'Cire d\'abeille ou huile naturelle', icon: 'star' });
-      matList.push({ name: 'Assemblage à la main', detail: 'Ateliers certifiés Maroc', icon: 'tool' });
+      matList.push({ name: 'Assemblage à la main', detail: 'Atelier fictif — matériau illustratif', icon: 'tool' });
     }
 
     const matIconSvg = (icon) => {
       const icons = {
-        tree:    `<path d="M17 22v-7M7 22v-7M12 22V12M12 12L4 18M12 12l8 6M12 12V2M5 9l7-7 7 7"/>`,
-        layers:  `<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>`,
-        shield:  `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`,
-        zap:     `<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>`,
-        hexagon: `<polygon points="21 16 21 8 12 3 3 8 3 16 12 21 21 16"/>`,
-        wind:    `<path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>`,
-        star:    `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>`,
-        tool:    `<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>`,
+        tree: `<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line>`,
+        layers: `<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline>`,
+        shield: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>`,
+        zap: `<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>`,
+        hexagon: `<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>`,
+        wind: `<path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>`,
+        star: `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>`,
+        tool: `<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>`,
       };
       return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">${icons[icon] || icons.shield}</svg>`;
     };
@@ -2574,27 +2574,27 @@ function openProduct(productId) {
         <div class="product-gallery-main" style="cursor:grab">
           <img src="${product.images[0]}" alt="${product.name}" id="mainGalleryImg" />
           ${discountPct > 0 ? `<span class="gallery-badge">-${discountPct}%</span>` : ''}
-          ${product.images.length > 1 ? `<div class="gallery-360-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg> 360°</div>` : ''}
+          ${product.images.length > 1 ? `<div class="gallery-360-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" data-feather-source="rotate-ccw"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg> Galerie</div>` : ''}
         </div>
         <div class="product-gallery-thumbs">
           ${product.images.map((img, i) => `
-            <div class="thumb-img ${i === 0 ? 'active' : ''}" data-src="${img}">
+            <button type="button" class="thumb-img ${i === 0 ? 'active' : ''}" data-src="${img}">
               <img src="${img}" alt="${product.name}" loading="lazy" />
-            </div>
+            </button>
           `).join('')}
         </div>
       </div>
       ` : ''}
 
       <div class="product-info"${product.images.length === 0 ? ' style="grid-column:1/-1;max-width:680px;margin:0 auto;"' : ''}>
-        <div class="product-info-category">${product.category}</div>
+        <p class="demo-note">Produit, vendeur, notes, stock, matériaux et dimensions fictifs. Photos d’illustration.</p><div class="product-info-category">${product.category}</div>
         <h1 class="product-info-name">${product.name}</h1>
         <div class="product-info-rating">
           <div class="product-stars">${renderStars(product.rating)}</div>
-          <span style="font-size:0.85rem;color:var(--text-secondary)">${product.rating} (${product.reviews} avis)</span>
+          <span style="font-size:0.85rem;color:var(--text-secondary)">${product.rating} (${product.reviews} avis fictifs)</span>
           <span style="color:var(--border-strong)">·</span>
           <span style="font-size:0.82rem;color:${product.stock > 0 ? 'var(--sage)' : '#c44'}">
-            ${product.stock > 0 ? `${product.stock} en stock` : 'Rupture de stock'}
+            ${product.stock > 0 ? `${product.stock} en stock fictif` : 'Rupture de stock'}
           </span>
         </div>
         <div class="product-info-price">
@@ -2605,10 +2605,10 @@ function openProduct(productId) {
 
         ${product.colors.length > 0 ? `
           <div class="product-options">
-            <div class="product-options-label">Coloris disponibles</div>
+            <div class="product-options-label">Coloris illustratifs (non enregistrés au panier)</div>
             <div class="color-options">
               ${product.colors.map((c, i) => `
-                <div class="color-swatch ${i === 0 ? 'active' : ''}" style="background:${c}" title="${c}" data-color="${c}"></div>
+                <button type="button" aria-label="Coloris de démonstration ${c}" class="color-swatch ${i === 0 ? 'active' : ''}" style="background:${c}" title="${c}" data-color="${c}"></button>
               `).join('')}
             </div>
           </div>
@@ -2618,33 +2618,31 @@ function openProduct(productId) {
           <div class="product-options-label">Quantité</div>
           <div class="quantity-selector">
             <button class="qty-btn" id="qtyMinus" aria-label="Moins">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-feather-source="minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
             <span class="qty-value" id="qtyDisplay">1</span>
             <button class="qty-btn" id="qtyPlus" aria-label="Plus">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-feather-source="plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
           </div>
         </div>
 
         <div class="product-actions">
           <button class="btn-primary large" id="addToCartBtn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-feather-source="shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
             Ajouter au panier
           </button>
           <button class="btn-outline wishlist-circle" id="wishlistDetailBtn" aria-label="Favoris">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="${wishlist.includes(product.id) ? 'var(--accent)' : 'none'}" stroke="${wishlist.includes(product.id) ? 'var(--accent)' : 'currentColor'}" stroke-width="1.5">
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="${wishlist.includes(product.id) ? 'var(--accent)' : 'none'}" stroke="${wishlist.includes(product.id) ? 'var(--accent)' : 'currentColor'}" stroke-width="1.5" data-feather-source="heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
           </button>
         </div>
 
         <div class="product-vendor-card">
-          <img src="${product.vendorImg}" alt="${product.vendor}" class="product-vendor-avatar" />
+          <img src="${product.vendorImg}" alt="Atelier fictif" class="product-vendor-avatar" />
           <div class="product-vendor-info">
-            <h4>${product.vendor}</h4>
+            <h4>${product.vendor} · atelier fictif</h4>
             <span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-2px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-2px" data-feather-source="map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               ${product.city}, Maroc
             </span>
           </div>
@@ -2696,19 +2694,19 @@ function openProduct(productId) {
           </div>
 
           <div class="product-tab-panel" id="tab-delivery">
-            <div class="delivery-list">
+            <p class="demo-note">Scénarios illustratifs : aucun service de livraison, retrait ou retour proposé.</p><div class="delivery-list">
               <div class="delivery-item">
                 <div class="delivery-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-feather-source="truck"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
                 </div>
                 <div class="delivery-text">
-                  <strong>Livraison à domicile offerte</strong>
+                  <strong>Exemple de livraison simulée</strong>
                   <span>Dans toutes les villes du Maroc — délai 5 à 10 jours ouvrés selon votre région.</span>
                 </div>
               </div>
               <div class="delivery-item">
                 <div class="delivery-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-feather-source="shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                 </div>
                 <div class="delivery-text">
                   <strong>Emballage protection premium</strong>
@@ -2717,7 +2715,7 @@ function openProduct(productId) {
               </div>
               <div class="delivery-item">
                 <div class="delivery-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-feather-source="home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                 </div>
                 <div class="delivery-text">
                   <strong>Retrait chez l'artisan possible</strong>
@@ -2726,11 +2724,11 @@ function openProduct(productId) {
               </div>
               <div class="delivery-item">
                 <div class="delivery-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-feather-source="rotate-ccw"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
                 </div>
                 <div class="delivery-text">
                   <strong>Retours acceptés — 14 jours</strong>
-                  <span>Pas satisfait ? Retournez le produit sous 14 jours pour un remboursement intégral, sans conditions.</span>
+                  <span>Exemple de politique de retour, sans engagement commercial.</span>
                 </div>
               </div>
             </div>
@@ -2787,7 +2785,7 @@ function openProduct(productId) {
         }, 160);
       };
 
-      window.addEventListener('mouseup', e => onCycleEnd(e.clientX));
+      galleryMain.addEventListener('mouseup', e => onCycleEnd(e.clientX));
       galleryMain.addEventListener('touchend', e => onCycleEnd(e.changedTouches[0].clientX));
     }
 
@@ -2901,7 +2899,7 @@ function handleContactSubmit() {
     return;
   }
 
-  showToast('Message envoyé ! Nous vous répondrons sous 24h.', 'success');
+  showToast('Formulaire testé localement. Aucun message envoyé ni conservé.', 'success');
   [firstName, lastName, email, subject, message].forEach(el => { if (el) el.value = ''; });
 }
 
@@ -2912,7 +2910,7 @@ function renderTrackingPage() {
   const itemsEl = document.getElementById('trackingItems');
   const totalEl = document.getElementById('trackingTotal');
 
-  if (numEl) numEl.textContent = order ? '#' + order.number : '#TF-2025-0001';
+  if (numEl) numEl.textContent = order ? '#' + order.number : 'Aucune simulation';
 
   if (itemsEl) {
     if (order) {
@@ -2943,17 +2941,28 @@ function renderTrackingPage() {
 
 /* ─── PAGE NAVIGATION ─── */
 function showPage(pageName) {
+  if (!document.getElementById(`page-${pageName}`)) pageName = 'home';
+  if (pageName === 'product' && !currentProductId) pageName = 'marketplace';
+  if (pageName === 'confirmation' && !lastOrder) { showToast('Aucune simulation terminée dans cette page.', 'info'); pageName = 'marketplace'; }
+  closeMobileMenu();
+  closeMobileFilters();
+  closeCart();
+  const route = pageName === 'product' ? `product/${currentProductId}` : pageName;
+  if (location.hash !== '#' + route) history.pushState(null, '', '#' + route);
+
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   const target = document.getElementById(`page-${pageName}`);
   if (target) {
     target.classList.add('active');
+    target.setAttribute('tabindex', '-1');
+    target.focus({preventScroll:true});
     target.classList.remove('page-enter');
     void target.offsetWidth;
     target.classList.add('page-enter');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // Hide navbar on protected dashboards and auth page; show on all other pages
+  // Dashboard layouts have their own navigation.
   const nav = document.getElementById('mainNav');
   if (nav) {
     if (pageName === 'vendor' || pageName === 'admin' || pageName === 'auth') {
@@ -2979,8 +2988,8 @@ function showPage(pageName) {
     initSearch();
   }
   if (pageName === 'vendor') {
-    // Security guard: redirect to auth if session expired
-    if (!isLoggedIn || !sessionStorage.getItem('tf_user')) {
+    // Demo persona selection, never a security boundary.
+    if (!isLoggedIn || !getCurrentUser()) {
       isLoggedIn = false;
       pendingReturnPage = 'vendor';
       setSelectedAuthRole('vendor');
@@ -2988,39 +2997,12 @@ function showPage(pageName) {
       return;
     }
     const user = getCurrentUser();
-    const application = ensureVendorApplication(user);
-    if (!user || user.role !== 'vendor') {
-      pendingReturnPage = 'vendor';
-      setSelectedAuthRole('vendor');
-      showToast('Connectez-vous avec un compte vendeur.', 'info');
-      setTimeout(() => showPage('auth'), 0);
-      return;
-    }
-    if (!application || application.status !== 'approved') {
-      renderVendorVerificationGate(application);
-      return;
-    }
-    clearVendorVerificationGate();
+    // Public demo dashboard; no protected resources or real seller privileges.
     switchVendorTab('overview');
     renderAnalyticsChart();
     renderVendorTopProducts();
   }
-  if (pageName === 'admin') {
-    if (!isLoggedIn || !sessionStorage.getItem('tf_user')) {
-      isLoggedIn = false;
-      pendingReturnPage = 'admin';
-      setSelectedAuthRole('admin');
-      setTimeout(() => showPage('auth'), 0);
-      return;
-    }
-    const user = getCurrentUser();
-    if (!user || user.role !== 'admin') {
-      showToast('Acces reserve aux administrateurs.', 'info');
-      setTimeout(() => showPage('home'), 0);
-      return;
-    }
-    renderAdminDashboard();
-  }
+  if (pageName === 'admin') renderAdminDashboard(); // Public read-only sample.
   if (pageName === 'tracking') {
     renderTrackingPage();
   }
@@ -3051,56 +3033,35 @@ function switchAuthTab(tab) {
 }
 
 function handleAuthBack() {
-  window.location.href = 'index.html?skipLoader=true';
+  pendingReturnPage = null; showPage('home');
 }
 
 function handleLogin() {
-  const emailEl = document.getElementById('loginEmail');
-  const email = (emailEl ? emailEl.value.trim() : '') || 'utilisateur@demo.com';
-  const name = email.split('@')[0] || 'utilisateur';
-  let role = getSelectedAuthRole('authLoginForm');
-  if (pendingReturnPage === 'vendor') role = 'vendor';
-  if (pendingReturnPage === 'admin') role = 'admin';
-  const user = { name, email, role };
-  if (role === 'vendor') ensureVendorApplication(user);
-  else sessionStorage.setItem('tf_user', JSON.stringify(user));
+  const role = pendingReturnPage === 'vendor' || getSelectedAuthRole('authLoginForm') === 'vendor' ? 'vendor' : 'customer';
+  demoUser = {name: 'Visiteur démo', email:'visiteur@example.invalid', role, demo:true};
   isLoggedIn = true;
   updateAuthNav();
-  showToast('Connexion réussie ! Bienvenue.', 'success');
-  const returnTo = pendingReturnPage || (role === 'admin' ? 'admin' : 'home');
+  const next = pendingReturnPage || (role === 'vendor' ? 'vendor' : 'home');
   pendingReturnPage = null;
-  setTimeout(() => {
-    if (returnTo === 'checkout') { renderCheckoutSummary(); }
-    showPage(returnTo);
-  }, 900);
+  showToast('Session de démonstration ouverte. Aucune authentification sécurisée.', 'info');
+  showPage(next === 'admin' ? 'home' : next);
 }
+
 function handleRegister() {
-  const nameEl = document.getElementById('registerName');
-  const emailEl = document.getElementById('registerEmail');
-  const name = (nameEl ? nameEl.value.trim() : '') || 'utilisateur';
-  const email = (emailEl ? emailEl.value.trim() : '') || `${name.toLowerCase().replace(/\s+/g, '.')}@demo.com`;
-  let role = getSelectedAuthRole('authRegisterForm');
-  if (pendingReturnPage === 'vendor') role = 'vendor';
-  const user = { name, email, role };
-  if (role === 'vendor') ensureVendorApplication(user);
-  else sessionStorage.setItem('tf_user', JSON.stringify(user));
-  isLoggedIn = true;
-  updateAuthNav();
-  showToast('Compte créé avec succès ! Bienvenue sur Tangier Furnish.', 'success');
-  const returnTo = pendingReturnPage || (role === 'vendor' ? 'vendor' : 'home');
-  pendingReturnPage = null;
-  setTimeout(() => showPage(returnTo), 900);
+  setSelectedAuthRole(getSelectedAuthRole('authRegisterForm'));
+  handleLogin();
 }
+
 function handleLogout() {
-  sessionStorage.removeItem('tf_user');
+  demoUser = null;
   isLoggedIn = false;
   updateAuthNav();
-  showToast('Déconnexion réussie. À bientôt !', 'info');
+  showToast('Session de démonstration fermée.', 'info');
   // Clear session and return to homepage
   setTimeout(() => showPage('home'), 600);
 }
 function updateAuthNav() {
-  const user = isLoggedIn ? JSON.parse(sessionStorage.getItem('tf_user') || '{}') : null;
+  const user = getCurrentUser();
   const loginBtn = document.querySelector('.nav-actions .btn-outline');
   const registerBtn = document.querySelector('.nav-actions .btn-primary');
   if (loginBtn && registerBtn) {
@@ -3112,10 +3073,10 @@ function updateAuthNav() {
       registerBtn.removeAttribute('data-page');
       registerBtn.onclick = handleLogout;
     } else {
-      loginBtn.textContent = 'Connexion';
+      loginBtn.textContent = 'Session démo';
       loginBtn.setAttribute('data-page', 'auth');
       loginBtn.onclick = null;
-      registerBtn.textContent = 'S\'inscrire';
+      registerBtn.textContent = 'Explorer la démo';
       registerBtn.setAttribute('data-page', 'auth');
       registerBtn.onclick = null;
     }
@@ -3123,57 +3084,6 @@ function updateAuthNav() {
 }
 
 /* ─── ROLE OPTIONS ─── */
-function clearVendorVerificationGate() {
-  const gate = document.getElementById('vendorVerificationGate');
-  if (gate) gate.remove();
-  document.querySelectorAll('.vendor-nav-item').forEach(item => {
-    item.style.pointerEvents = '';
-    item.style.opacity = '';
-  });
-}
-
-function renderVendorVerificationGate(application) {
-  document.querySelectorAll('.vendor-tab').forEach(t => t.style.display = 'none');
-  document.querySelectorAll('.vendor-nav-item').forEach(item => {
-    item.classList.remove('active');
-    item.style.pointerEvents = 'none';
-    item.style.opacity = '0.45';
-  });
-  const main = document.querySelector('#page-vendor .vendor-main');
-  if (!main) return;
-  let gate = document.getElementById('vendorVerificationGate');
-  if (!gate) {
-    gate = document.createElement('div');
-    gate.id = 'vendorVerificationGate';
-    main.prepend(gate);
-  }
-  const status = application && application.status ? application.status : 'pending';
-  const isRejected = status === 'rejected';
-  gate.innerHTML = `
-    <div class="vendor-page-header">
-      <div>
-        <h1>Verification vendeur</h1>
-        <p>${isRejected ? 'Votre demande vendeur doit etre corrigee avant validation.' : 'Votre demande est en cours de verification par un administrateur.'}</p>
-      </div>
-    </div>
-    <div class="verification-panel">
-      <div class="verification-icon ${isRejected ? 'rejected' : 'pending'}">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          ${isRejected ? '<path d="M18 6L6 18M6 6l12 12" />' : '<path d="M12 6v6l4 2" /><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />'}
-        </svg>
-      </div>
-      <div>
-        <h2>${isRejected ? 'Demande refusee' : 'Demande en attente'}</h2>
-        <p>${isRejected ? 'Contactez le support ou soumettez de nouvelles informations pour reactiver votre acces vendeur.' : 'Un administrateur doit approuver ce compte avant que le tableau de bord vendeur soit accessible.'}</p>
-        <div class="verification-meta">
-          <span>Compte: ${application ? application.email : 'vendeur'}</span>
-          <span>Statut: ${status}</span>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
 function renderAdminDashboard() {
   const list = document.getElementById('adminVendorList');
   if (!list) return;
@@ -3192,13 +3102,13 @@ function renderAdminDashboard() {
   list.innerHTML = applications.map((app, index) => `
     <div class="admin-vendor-row" style="--row-delay:${index * 55}ms">
       <div class="admin-vendor-main">
-        <strong>${app.name}</strong>
-        <span>${app.email} - ${app.city} - ${app.submittedAt}</span>
+        <strong>${escapeHTML(app.name)}</strong>
+        <span>${escapeHTML(app.email)} - ${escapeHTML(app.city)} - ${escapeHTML(app.submittedAt)}</span>
       </div>
-      <span class="verification-status ${app.status}">${app.status}</span>
+      <span class="verification-status ${escapeHTML(app.status)}">${escapeHTML(app.status)}</span>
       <div class="admin-vendor-actions">
-        <button class="btn-outline small" data-vendor-verify="${app.id}" data-status="rejected">Refuser</button>
-        <button class="btn-primary small" data-vendor-verify="${app.id}" data-status="approved">Approuver</button>
+        <button class="btn-outline small" data-vendor-verify="${escapeHTML(app.id)}" data-status="rejected">Refuser</button>
+        <button class="btn-primary small" data-vendor-verify="${escapeHTML(app.id)}" data-status="approved">Approuver</button>
       </div>
     </div>
   `).join('');
@@ -3213,7 +3123,7 @@ document.addEventListener('click', (e) => {
   const verifyBtn = e.target.closest('[data-vendor-verify]');
   if (verifyBtn) {
     e.preventDefault();
-    updateVendorApplicationStatus(verifyBtn.dataset.vendorVerify, verifyBtn.dataset.status);
+    showToast('Administration en lecture seule : aucune autorisation réelle modifiée.', 'info');
     return;
   }
   // Global navigation via data-page attribute
@@ -3314,8 +3224,8 @@ function renderAnalyticsChart() {
 }
 
 function handleAddProduct() {
-  showToast('Produit publié avec succès !', 'success');
-  setTimeout(() => switchVendorTab('products'), 1200);
+  showToast('Publication indisponible dans cette démo. Aucun produit enregistré.', 'info');
+  switchVendorTab('products');
 }
 
 /* ─── MOBILE MENU ─── */
@@ -3324,13 +3234,13 @@ function toggleMobileMenu() {
   const toggle = document.getElementById('mobileToggle');
   if (!menu) return;
   const isOpen = menu.classList.toggle('open');
-  if (toggle) toggle.classList.toggle('open', isOpen);
+  if (toggle) { toggle.classList.toggle('open', isOpen); toggle.setAttribute('aria-expanded', String(isOpen)); }
 }
 function closeMobileMenu() {
   const menu = document.getElementById('mobileMenu');
   const toggle = document.getElementById('mobileToggle');
   if (menu) menu.classList.remove('open');
-  if (toggle) toggle.classList.remove('open');
+  if (toggle) { toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
 }
 
 /* ─── NAVBAR SCROLL ─── */
@@ -3358,14 +3268,14 @@ function showToast(message, type = 'info') {
   if (!container) return;
 
   const icons = {
-    success: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>`,
-    error:   `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>`,
-    info:    `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
+    success: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" data-feather-source="check"><polyline points="20 6 9 17 4 12"></polyline></svg>`,
+    error:   `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-feather-source="x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>`,
+    info:    `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-feather-source="info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`,
   };
 
   const toast = document.createElement('div');
   toast.className = `toast toast-${type}`;
-  toast.innerHTML = `<span class="toast-icon">${icons[type] || icons.info}</span><span>${message}</span>`;
+  toast.innerHTML = `<span class="toast-icon">${icons[type] || icons.info}</span><span>${escapeHTML(message)}</span>`;
   container.appendChild(toast);
 
   // Trigger entrance animation
@@ -3534,7 +3444,7 @@ function hideLoader() {
 /* ─── INIT ─── */
 document.addEventListener('DOMContentLoaded', () => {
   hideLoader();
-  showPage('home');
+  restoreRoute();
   updateCartUI();
   updateWishlistNavCount();
   updateAuthNav();
@@ -3610,26 +3520,6 @@ function wireStaticButtons() {
 
   // Demo account: fill credentials automatically (button removed from UI)
   // Kept for programmatic use only — no DOM binding needed
-
-  // Social login buttons (UI demo — trigger standard login flow)
-  const googleBtn = document.getElementById('googleLoginBtn');
-  const appleBtn  = document.getElementById('appleLoginBtn');
-  if (googleBtn) {
-    googleBtn.addEventListener('click', () => {
-      const emailEl = document.getElementById('loginEmail');
-      if (emailEl) emailEl.value = 'google.user@gmail.com';
-      showToast('Connexion Google simulée…', 'info');
-      setTimeout(handleLogin, 600);
-    });
-  }
-  if (appleBtn) {
-    appleBtn.addEventListener('click', () => {
-      const emailEl = document.getElementById('loginEmail');
-      if (emailEl) emailEl.value = 'apple.user@icloud.com';
-      showToast('Connexion Apple simulée…', 'info');
-      setTimeout(handleLogin, 600);
-    });
-  }
 
   // Sort select
   const sortSelect = document.getElementById('sortSelect');
@@ -3734,3 +3624,55 @@ document.addEventListener('click', (e) => {
     link.style.transition = 'color 0.22s ease';
   });
 })();
+
+// Hash routes work on static hosting and survive refresh/back/forward.
+function restoreRoute() {
+  const route = location.hash.slice(1).split('/');
+  if (route[0] === 'product') {
+    const id = Number(route[1]);
+    if (PRODUCTS.some(p => p.id === id)) { openProduct(id); showPage('product'); return; }
+  }
+  showPage(route[0] || 'home');
+}
+window.addEventListener('popstate', restoreRoute);
+// Fixed, trusted fallback: remote photos may be unavailable or blocked offline.
+document.addEventListener('error', e => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement) || img.dataset.fallback) return;
+  img.dataset.fallback = 'true';
+  img.alt = 'Illustration indisponible — ' + img.alt;
+  img.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450"><rect width="600" height="450" fill="#ede9e2"/><path d="M150 300V200h300v100M150 270h300M180 300v30m240-30v30" fill="none" stroke="#9a9189" stroke-width="8"/><text x="300" y="390" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#5a5349">Illustration indisponible</text></svg>');
+}, true);
+document.addEventListener('click', e => {
+  const link = e.target.closest('a[href="#"]');
+  if (link && !link.dataset.page && !link.dataset.vendorTab) {
+    e.preventDefault();
+    showToast('Présentation uniquement : cette ressource est indisponible dans la démo.', 'info');
+  }
+});
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('label').forEach((label, index) => {
+    if (label.htmlFor || label.querySelector('input,select,textarea')) return;
+    const field = label.parentElement.querySelector('input,select,textarea');
+    if (field) { if (!field.id) field.id = 'demo-field-' + index; label.htmlFor = field.id; }
+  });
+  document.querySelectorAll('.nav-logo, .auth-card-logo').forEach(el => {
+    el.tabIndex = 0; el.setAttribute('role','button'); el.setAttribute('aria-label','Accueil');
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); } });
+  });
+  document.querySelectorAll('input,textarea').forEach(el => el.maxLength = 500);
+  document.querySelectorAll('#googleLoginBtn,#appleLoginBtn').forEach(el => {
+    el.disabled = true; el.title = 'OAuth indisponible dans cette démonstration';
+    el.append(' — indisponible');
+  });
+  document.querySelectorAll('.cart-qty-btn').forEach(el => el.setAttribute('aria-label', Number(el.dataset.delta) > 0 ? 'Augmenter la quantité' : 'Réduire la quantité'));
+});
+
+document.addEventListener('keydown', e => {
+  const drawer = document.getElementById('cartDrawer').classList.contains('open') ? document.getElementById('cartDrawer') : document.getElementById('filtersSidebar');
+  if (e.key !== 'Tab' || !drawer.classList.contains('open')) return;
+  const fields = [...drawer.querySelectorAll('button,a,input,select,[tabindex="0"]')].filter(el => !el.disabled && el.getClientRects().length);
+  const first = fields[0], last = fields[fields.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});

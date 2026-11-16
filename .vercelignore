@@ -1,0 +1,10 @@
+# Deploy only the public runtime. No audit archives, source history, or editor settings.
+*
+!index.html
+!styles.css
+!script.js
+!vercel.json
+!assets/
+!assets/demo-avatar.svg
+!licenses/
+!licenses/FEATHER-MIT.txt

@@ -1,0 +1,12 @@
+.qa/browser-profile/
+.qa/*.png
+__pycache__/
+.vercel/
+img_audit/
+img_audit.zip
+.qa/
+.vscode/
+.env
+.env.*
+*.pem
+*.key

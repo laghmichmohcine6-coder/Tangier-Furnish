@@ -1,0 +1,6 @@
+# Exclude unused stock-photo collections and local QA from future git-archive exports.
+/img_audit export-ignore
+/img_audit.zip export-ignore
+/.qa export-ignore
+/.vscode export-ignore
+/.vercel export-ignore

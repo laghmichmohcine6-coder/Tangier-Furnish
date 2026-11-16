@@ -1,0 +1,11 @@
+{
+  "purpose": "Allowlist for a future source handover; no package has been created.",
+  "files": [
+    "index.html", "styles.css", "script.js", "assets/demo-avatar.svg",
+    "vercel.json", ".vercelignore", "README.md", "DEPLOYMENT.md",
+    "ASSET-RIGHTS.md", "THIRD-PARTY-NOTICES.md", "TEST-REPORT.md",
+    "licenses/FEATHER-MIT.txt", "licenses/JOST-OFL.txt", "licenses/PLAYFAIR-DISPLAY-OFL.txt"
+  ],
+  "exclude": ["img_audit/", "img_audit.zip", ".git/", ".qa/", ".vscode/", ".vercel/"],
+  "rights": "Exclusive transfer covers seller-owned original code and design only. Stock photos, Feather icons and fonts remain third-party assets under their own nonexclusive licenses."
+}
